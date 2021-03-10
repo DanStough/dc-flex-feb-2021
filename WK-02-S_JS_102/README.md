@@ -21,6 +21,13 @@ What to expect while you're learning JavaScript...
 
 ---
 
+### Announcements
+
+1. Tuesday we will have a 1 hour career session
+2. April 4th is a class holiday
+
+---
+
 ### References
 
 [Learning Portal: Exploring JavaScript](https://learn.digitalcrafts.com/flex/lessons/solving-problems-using-code-js/js-101/)
@@ -40,7 +47,39 @@ JavaScript Practice Sites in order of easier to harder.
 ### Homework
 
 1. [Complete the Retrospective](https://hackmd.io/OoWk-5x3Qh21pIff87AUOQ) for the first two weeks.
-2. Work on JS201 Exercises (Minimum of 5)
+2. [Work on JS201 Exercises](https://github.com/DanStough/dc-flex-feb-2021/blob/ab557d14f9734b4344fc8a8e6c4f11d433f75982/WK-02-JS_102/homework-js201/README.md) (Minimum of 5)
+    1. If you try using the test runner on Mac, and get an error like `No receipt for 'com.apple.pkg.CLTools_Executables' found at '/'.`, install the following using the terminal:
+        1. `xcode-select --install`
 3. Read [Solving Problems with Code](https://learn.digitalcrafts.com/flex/lessons/solving-problems-using-code-js/common-patterns/#learning-objectives) on the Learning Portal
 4. Get a head start by starting [Callbacks and Anonymous Functions](https://learn.digitalcrafts.com/flex/lessons/solving-problems-using-code-js/callbacks/#summary) on the Learning Portal
 5. Use the above sites to practice WHENEVER YOU GET FREE TIME and don't stop until the end of the class 😉
+
+### Example Soln - 201-hello-world.js
+
+```js
+// Write a function "hello" that takes one argument (a name), and returns a
+// string that says hello to the name.
+// Examples:
+// - hello('Mustache') should return 'Hello, Mustache!'
+// - hello('banana') should return 'Hello, banana!'
+// - hello('DETROIT') should return 'Hello, DETROIT!'
+
+function hello(name) {
+    return "Hello, " + name + "!";
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Write a function "helloDefault" such that if no name is given it will return
+// 'Hello, world!'
+// Otherwise it behaves the same as the "hello" function.
+function helloDefault(name) {
+    if(name){
+        // There is a name
+        return hello(name);
+    }
+    else {
+        // there is no name; name is undefined
+        return hello("world");
+    }
+}
+```
