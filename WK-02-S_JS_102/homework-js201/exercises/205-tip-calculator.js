@@ -10,6 +10,15 @@
 // tipAmount(100, 'good') --> 20
 // tipAmount(40, 'fair') --> 6
 
+function tipAmount (billAmount, levelService) {
+  if (levelService === "good") {
+    return billAmount * .2;
+  } else if (levelService === "fair") {
+    return billAmount * .15;
+  } else if (levelService === "poor") {
+    return billAmount * .1;
+  }
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -21,6 +30,16 @@
 // totalAmount(100, 'good') --> 120
 // totalAmount(40, 'fair') --> 46
 
+function totalAmount (billAmount, levelService) {
+  if (levelService === "good") {
+    return billAmount * 1.2;
+  } else if (levelService === "fair") {
+    return billAmount * 1.15;
+  } else if (levelService === "poor") {
+    return billAmount * 1.1;
+  }
+}
+
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -31,3 +50,13 @@
 // Examples:
 // splitAmount(100, 'good', 5) --> 24
 // splitAmount(40, 'fair', 2) --> 23
+
+function splitAmount (billAmount, levelService, numFriends) {
+  if (levelService === "good") {
+    return (billAmount * 1.2)/numFriends;
+  } else if (levelService === "fair") {
+    return (billAmount * 1.15)/numFriends;
+  } else if (levelService === "poor") {
+    return (billAmount * 1.1)/numFriends;
+  }
+}
