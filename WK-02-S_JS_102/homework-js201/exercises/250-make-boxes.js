@@ -8,10 +8,17 @@
 // *****
 // *****
 
-function makeSquare() {
-    
+function makeSquare(num) {
+    // let lines = [[]];
+    for(let i =0; i<num; i++){
+        for(let j =0; j<num; j++){
+            console.print('*');
+        }
+        println('');
+    }
 }
-
+makeSquare(2);
+makeSquare(5);
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "makeBox" which is given a width and height and returns a
 // hollow box of those dimensions.
