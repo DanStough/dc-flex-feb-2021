@@ -10,6 +10,18 @@
 // fizzbuzz(3) --> '..fizz'
 // fizzbuzz(15) --> '..fizz.buzzfizz..fizzbuzz.fizz..fizzbuzz'
 
-function fizzbuzz(n) {
-  for(let i = 1; i <= n;)
+function fizzbuzz(num) {
+  for(let i = 0; i <= num; i++) {
+    if (i % 3 !== 0 && i % 5 !== 0) {
+      console.log('.');
+    } else if (i % 3 === 0 && i % 5 !== 0) {
+      console.log('fizz');
+    } else if (i % 5 === 0 && i % 3 !== 0) {
+      console.log('buzz');
+    }else if (i % 3 === 0 && i % 5 === 0) {
+      console.log('fizzbuzz');
+    } else {
+      console.log(i);
+    }
+  }
 }
