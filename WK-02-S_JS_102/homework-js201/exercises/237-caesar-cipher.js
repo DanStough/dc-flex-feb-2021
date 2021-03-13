@@ -7,7 +7,15 @@
 // 'ljsnzx bnymtzy jizhfynts nx qnpj xnqajw ns ymj rnsj'
 // > cipher('We hold these truths to be self-evident', 8)
 // 'em pwtl bpmam bzcbpa bw jm amtn-mdqlmvb'
+function cipher(str, shift){
+    const legend = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    temp = str.split('');
+    let key = [];
+    for(let i =shift; i<=legend.length; i++){
+        if(i >= 26)
+    }
 
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -19,3 +27,6 @@
 // 'attack at dawn!'
 // > decipher('ehz czlod otgpcrpo ty l hzzo', 11)
 // 'two roads diverged in a wood'
+function decipher(str, shift){
+
+}

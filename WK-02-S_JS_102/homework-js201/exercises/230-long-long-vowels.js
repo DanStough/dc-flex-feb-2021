@@ -8,3 +8,6 @@
 // 'Cheeeeese'
 // > longLongVowels('Man')
 // 'Man'
+function longLongVowels(word){
+
+}

@@ -7,7 +7,13 @@
 //
 // Example:
 // reverse("skoob") --> "books"
-
+ function reverse(words){
+     let sdrow =''; // words backward
+     for(let i = 0; i<=words.length; i++){
+        sdrow += words.charAt(words.length-i);
+     }
+     return sdrow;
+ }
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -17,7 +23,16 @@
 //
 // Example:
 // findLongestWord('a book full of dogs') --> 'book'
-
+function findLongestWord(sentence){
+    let arr = sentence.split(' ');
+    let longest = '';
+    for(let i =0; i<arr.length; i++){
+        if(arr[i].length > longest.length){
+            longest = arr[i];
+        }
+    }
+    return longest;
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,7 +43,19 @@
 // Example:
 // nicer('mom get the heck in here and bring me a darn sandwich.')
 // > 'mom get the in here and bring me a sandwich.'
-
+function nicer(sentence){
+    let forbiddenWords = ['heck', 'darn', 'dang', 'crappy'];
+    let sentArray = sentence.split(' ');
+    let loop = sentArray.length;
+    for(let i = 0; i < loop; i++){
+        for(let j=0; j<forbiddenWords.length; j++){
+            if(sentArray[i] === forbiddenWords[j]){
+                sentArray.splice(i,1);
+            }
+        }
+    }
+    return sentArray.join(' ');
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -39,7 +66,13 @@
 // Examples:
 // capitalizeAll('hello world') --> 'Hello World'
 // capitalizeAll('every day is like sunday') --> 'Every Day Is Like Sunday'
-
+function capitalizeAll(sentence){
+   let words = sentence.split(' ');
+   for(let i =0; i<words.length;i++){
+       words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+   }
+   return words.join(' ');
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,3 +85,6 @@
 // split('a-b-c', '-') --> ['a', 'b', 'c']
 // split('APPLExxBANANAxxCHERRY', 'xx') --> ['APPLE', 'BANANA', 'CHERRY']
 // split('xyz', 'r') --> ['xyz']
+function split(jumble, symbol){
+    return jumble.split(symbol); // uses the split function will need source code
+}

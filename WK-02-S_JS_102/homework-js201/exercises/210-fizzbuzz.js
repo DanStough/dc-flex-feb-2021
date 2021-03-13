@@ -9,3 +9,32 @@
 // Examples:
 // fizzbuzz(3) --> '..fizz'
 // fizzbuzz(15) --> '..fizz.buzzfizz..fizzbuzz.fizz..fizzbuzz'
+function fizzbuzz(num1){
+    let arr = [];
+    let fizzyStr = '';
+    for(let i=0;i<num1; i++){
+        arr.push(i+1);
+    }
+    //console.log(arr);
+    for(let j=0; j<arr.length; j++){
+        if(arr[j]%3 !==0 && arr[j]%5 !==0){
+            fizzyStr += '.';
+        }
+        else if(arr[j]%5 ==0 && arr[j]%3 !==0){
+            fizzyStr += 'buzz';
+        }
+        else if(arr[j]%5 !==0 && arr[j]%3 ==0){
+            fizzyStr += 'fizz';
+        }
+        else if(arr[j]%5 ==0 && arr[j]%3 ==0){
+            fizzyStr += 'fizzbuzz';
+        }
+        else{
+            null;
+        }
+    }
+    return fizzyStr;
+}
+// console.log(fizzbuzz(3));
+// console.log(fizzbuzz(15));
+// console.log(fizzbuzz('a'));

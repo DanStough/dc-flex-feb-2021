@@ -4,13 +4,36 @@
 // Examples:
 // numberJoinerWhile(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerWhile(12, 14) --> '12_13_14'
-
+function numberJoinerWhile(start, finish){
+    let jointSentence = '';
+    while(start <= finish){
+        if(start === finish){
+            jointSentence += `${start}`;
+        }
+        else{
+        jointSentence += `${start}_`;
+        }
+        start++;
+    }
+    return jointSentence;
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFor" which does the same thing as "numberJoinerWhile",
 // except using a "for" loop internally.
-
+function numberJoinerFor(start, finish){
+    let jointSentence ='';
+    for(let i= start; i <=finish; i++){
+        if(i === finish){
+            jointSentence += `${finish}`;
+        }
+        else{
+            jointSentence += `${i}_`;
+        }
+    }
+    return jointSentence;
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -21,3 +44,31 @@
 // numberJoinerFancy(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerFancy(1, 5, '~') --> 1~2~3~4~5
 // numberJoinerFancy(3, 6, '***BANANAS***') --> 1***BANANAS***2***BANANAS***3
+function numberJoinerFancy( start, finish, special){
+    if( special === undefined){
+        let jointSentence = '';
+        for(let i= start; i <=finish; i++){
+            if(i === finish){
+                jointSentence += `${finish}`;
+            }
+            else{
+                jointSentence += `${i}_`;
+            }
+        }
+        return jointSentence;
+    }
+    else{
+        let jointSentence = '';
+        for(let i = start; i<=finish; i++){
+            if(i === finish){
+                jointSentence += `${finish}`;
+            }
+            else{
+                jointSentence += `${i}${special}`;
+            }
+        }
+        return jointSentence;
+    }
+}
+
+console.log(numberJoinerFancy(1,10));
