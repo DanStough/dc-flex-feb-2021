@@ -46,14 +46,18 @@ function isEven (myNum) {
 }
 function isOdd (myNum) {
   if (typeof myNum === "number") {
+    // filter out case for decimals 
+    //  since decimals are not odd nor even
     if (myNum % 1 !== 0) {
       return false;
+    // filter out even
     } else if (myNum%2 === 0) {
       return false;
     } else {
       return true;
     }
   }
+  // if not a number return false
   return false;
 }
 
@@ -71,3 +75,15 @@ function isOdd (myNum) {
 // isCapitalCity('Texas', 'Houston') --> false
 // isCapitalCity('Alaska', 'Juneau') --> true
 // isCapitalCity('Strawberry', 'Mango') --> false
+
+let stateCityOBJ = {
+  Texas: 'Austin',
+  Alaska: 'Juneau',
+}
+
+function isCapitalCity (myState, myCity) {
+  // look up in my dictionary, comparison
+  return stateCityOBJ[myState] === myCity;
+}
+
+

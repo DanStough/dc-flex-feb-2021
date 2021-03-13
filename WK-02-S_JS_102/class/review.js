@@ -32,3 +32,12 @@ function subtract(num1, num2) {
  console.log( subtract(2, 1) )
  console.log( subtract(-1, 1) )
 
+
+let todos = ["Groceries"];
+
+function printTodoCount(todoArray) {
+    const howMany = todoArray.length;
+    if (howMany === 0) {
+        console.log('All done!');
+    }
+}
