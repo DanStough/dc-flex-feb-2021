@@ -47,16 +47,6 @@ console.log(isVowel('w'));
 // isOdd('7') --> false
 // isOdd(3.14) --> false
 
-function isEven(num) {
-  return num % 2 === 0;
-}
-
-console.log(isEven(22));
-
-function isOdd(num) {
-  return num % 2 !== 0;
-}
-
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -73,7 +63,3 @@ function isOdd(num) {
 // isCapitalCity('Texas', 'Houston') --> false
 // isCapitalCity('Alaska', 'Juneau') --> true
 // isCapitalCity('Strawberry', 'Mango') --> false
-
-function isCapitalCity(state, city) {
-  
-}
