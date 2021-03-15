@@ -10,7 +10,6 @@
 I am from **Houston, Texas**
 
 <<<<<<< HEAD
-I have a pet Pomeranian named _Brownie_
 =======
 ## Important Links
 
@@ -70,5 +69,7 @@ For example `WK-01-R_Command_Line` for Week 1 Thursday's Lecture on Command Line
 
 There will be additional Student Resources provided to you in this directory that are focused on helping you plan for your next career moves. You'll find great information in here regarding Career prep, Resume and Portfolio resources, and other information related to Job Searches.
 >>>>>>> main
+
+I have a pet Pomeranian named _Brownie_
 
 ![Pomeranian](https://moderndogmagazine.com/sites/default/files/images/photoentries/photos/IMG_2387.PNG)
