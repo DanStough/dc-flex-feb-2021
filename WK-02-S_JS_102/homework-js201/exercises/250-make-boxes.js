@@ -9,12 +9,13 @@
 // *****
 
 function makeSquare(num) {
-    // let lines = [[]];
+    let lines = '';
     for(let i =0; i<num; i++){
         for(let j =0; j<num; j++){
-            console.print('*');
+            lines += '*';
         }
-        println('');
+        console.log(`${lines} \n`);
+        lines = '';
     }
 }
 makeSquare(2);

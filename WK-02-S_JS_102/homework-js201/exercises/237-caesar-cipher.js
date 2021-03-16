@@ -24,8 +24,9 @@ function cipher(str, shift){
             if(temp[i] === legend[j]){
                 enc.push(key[j]);
             }
-            if(temp[i] === null){
+            if(temp[i] === ' '){
                 enc.push(' ');
+                break;
             }
         }
     }
