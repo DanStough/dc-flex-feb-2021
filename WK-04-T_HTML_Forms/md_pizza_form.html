@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Pizza Form</title>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <legend><h1>Order a Pizza</h1></legend>
+      <p><strong>Choose a type of crust:</strong></p>
+      <div>
+        <input type="radio" name="crust" id="thin" value="thin">
+        <label for="thin">Thin</label>
+        <input type="radio" name="crust" id="thick" value="thick">
+        <label for="thick">Thick</label>
+        <input type="radio" name="crust" id="stuff" value="stuff">
+        <label for="stuff">Stuffed</label>
+        <input type="radio" name="crust" id="deep" value="deep">
+        <label for="deep">Deep Dish</label>
+      </div>
+      <p><strong>Choose Toppings:</strong></p>
+      <div>
+        <input type="checkbox" name="topping" id="pepperoni" value="pepperoni">
+        <label for="pepperoni">Pepperoni</label>
+        <input type="checkbox" name="topping" id="topping" value="topping">
+        <label for="olives">Olives</label>
+        <input type="checkbox" name="topping" id="sausage" value="sausage">
+        <label for="sausage">Sausage</label>
+        <input type="checkbox" name="topping" id="mushrooms" value="mushroom">
+        <label for="mushroom">Mushroom</label>
+      </div>
+      <p><strong>Delivery or Pick up:</strong></p>
+      <div>
+        <label for="process">Pick one</label>
+        <select name="process" id="process">
+          <option value="delivery">Delivery</option>
+          <option value="pickup">Pick Up</option>
+        </select>
+      </div>
+      <p><strong>Address:</strong></p>
+      <div>
+        <label for="address">Enter:</label>
+        <input type="text" name="address" id="address" placeholder="address">
+      </div>
+      <p><strong>Enter your name:</strong></p>
+      <div>
+        <label for="name">Enter:</label>
+        <input type="text" name="name" id="name" placeholder="name">
+      </div>
+      <p><strong>Add any additional instructions:</strong></p>
+      <div>
+        <label for="extra">Enter:</label>
+        <br>
+        <textarea name="extra" id="extra" cols="30" rows="10" placeholder="Type something here"></textarea>
+      </div>
+      <button>Submit</button>
+    </fieldset>
+  </form>
+</body>
+</html>
