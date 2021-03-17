@@ -7,6 +7,42 @@
   <title>User Sign up and login form</title>
 </head>
 <body>
-  
+  <form action="">
+    <fieldset>
+      <legend><h1>User Sign up form</h1></legend>
+      <div>
+        <label for="name">Enter your fullname:</label>
+        <input type="text" name="name" id="name" placeholder="John Smith" required>
+      </div>
+      <div>
+        <label for="password">Enter your password:</label>
+        <input type="text" name="password" id="password" placeholder="Password" required>
+      </div>
+      <div>
+        <label for="number">Enter your phone number:</label>
+        <input type="text" name="number" id="number" placeholder="123-456-789" required>
+      </div>
+      <div>
+        <label for="tell">Tell me something about yourself:</label>
+        <br>
+        <textarea name="tell" id="tell" cols="30" rows="10" placeholder="Type something here"></textarea>
+      </div>
+      <input type="submit" id="submit-button" value="submit">
+    </fieldset>
+  </form>
+  <br>
+  <form action="">
+    <fieldset>
+      <legend><h1>Email & Password</h1></legend>
+      <p>
+        <label for="username">Enter a username:</label>
+        <input type="text" id="username" placeholder="username" name="username" required>
+      </p>
+      <p>
+        <label for="password">Enter a password:</label>
+        <input type="text" id="password" placeholder="password" name="password" required>
+      </p>
+    </fieldset>
+  </form>
 </body>
 </html>
