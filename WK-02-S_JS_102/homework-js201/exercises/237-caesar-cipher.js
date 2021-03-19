@@ -19,7 +19,7 @@ function cipher(str, shift){
         key.push(legend[i]);
     }
     // console.log(temp);
-    for(let i = 0; i< temp.length; i++){
+    for(let i = 0; i< temp.length; i++){ //encrypted message
         for(let j =0; j<legend.length;j++){
             if(temp[i] === legend[j]){
                 enc.push(key[j]);
@@ -47,5 +47,32 @@ cipher('hello world',2);
 // > decipher('ehz czlod otgpcrpo ty l hzzo', 11)
 // 'two roads diverged in a wood'
 function decipher(str, shift){
-
+    const legend = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    let temp = str.split('');
+    let enc = [];
+    let key = [];
+    for(let i =shift; i<legend.length; i++){
+        key.push(legend[i]);
+    }
+    for(let i= 0; i< shift; i++){
+        key.push(legend[i]);
+    }
+    // console.log(temp);
+    for(let i = 0; i< temp.length; i++){ //decrypt message
+        for(let j =0; j<legend.length;j++){
+            if(temp[i] === key[j]){
+                enc.push(legend[j]);
+            }
+            if(temp[i] ===) //need to check for special characters.
+            if(temp[i] === ' '){
+                enc.push(' ');
+                break;
+            }
+        }
+    }
+    console.log(key);
+    console.log(temp.join(''));
+    console.log(enc.join(''));
 }
+
+decipher('cvvcem cv fcyp!', 2);

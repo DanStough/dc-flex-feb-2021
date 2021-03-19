@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Pizza Order Form</title>
+    </head>
+    <body>
+        <div>
+            <fieldset>
+                <legend>Create Your Pizza</legend>
+                <div>
+                    <fieldset>
+                        <legend><b>Select Your Crust Type</b></legend>
+                        <label for="size"><input type="radio" name="crust" id="thin" value="thin" />Thin</label>
+                        <label for="size"><input type="radio" name="crust" id="regular" value="regular" />Regular</label>
+                        <label for="size"><input type="radio" name="crust" id="stuffed" value="stuffed" />Stuffed</label>
+                        <label for="size"><input type="radio" name="crust" id="pan" value="pan" />Pan Tossed</label>
+                    </fieldset>
+                </div>
+                
+                <div>
+                    <fieldset>
+                        <legend><b>Select Toppings</b></legend>
+                        <label><input for="cheese" type="checkbox" name="cheese" value="cheese" />Cheese</label>
+                        <label><input for="peperoni" type="checkbox" name="peperoni" value="peperoni" />Pepperoni</label>
+                        <label><input for="mushrooms" type="checkbox" name="mushrooms" value="mushrooms" />Mushroom</label>
+                        <label><input for="olives" type="checkbox" name="olives" value="olives" />Olives</label>
+                        <label><input for="pepper" type="checkbox" name="pepper" value="pepper" />Green Peppers</label>
+                        <label><input for="cheese" type="checkbox" name="chicken" value="chicken" />Chicken</label>
+                        <label><input for="cheese" type="checkbox" name="beef" value="beef" />Beef</label>
+                    </fieldset>
+                </div>
+
+                <div>
+                    <fieldset>
+                        <legend><b>Pickup or Delivery?</b></legend>
+                        <label for="p-d"><input type="radio" name="p-d" id="delivery" value="delivery" />Delivery</label>
+                        <label for="p-d"><input type="radio" name="p-d" id="pickup" value="pickup" />Pickup</label>
+                    </fieldset>
+                </div>
+
+                <div>
+                    <fieldset>
+                        <legend><b>Enter Your Name & Address</b></legend>
+                        <label for="name" >Name</label>
+                        <input type="text" name="name" />
+                        
+                        <label for="street" >Street</label>
+                        <input type="text" name="street" />
+
+                        <label for="city" >City</label>
+                        <input type="text" name="city" />
+
+                        <label for="state" >State</label>
+                        <select name="state" >
+                            <option value="" disabled selected>--Please Choose an Option--</option>
+                            <option value="ga">Georgia</option>
+                            <option value="fl">Florida</option>
+                            <option value="tx">Texas</option>
+                        </select>
+                        <label for="zip" >Zip Code</label>
+                        <input type="text" name="zip" />
+                    </fieldset>
+                </div>
+
+                <div>
+                    <fieldset>
+                        <legend>Custom Instructions</legend>
+                        <textarea name="customizations" width=500p>
+                        Put your instructions here....
+                        </textarea>
+                    </fieldset>
+                </div>
+
+            </fieldset>
+            <input type="submit" />
+        </div>
+    </body>
+</html>
