@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Splunkin Online Order Form</title>
+    </head>
+    <body>
+        <h1>Splunkin Donuts Order Form</h1>
+        <form onsubmit="event.preventDefault();">
+            <fieldset>
+                <legend>Delivery Address</legend>
+                <label for="name" >Name</label>
+                <input type="text" name="name" />
+        
+                <label for="street" >Street</label>
+                <input type="text" name="street" />
+        
+                <label for="city" >City</label>
+                <input type="text" name="city" />
+        
+                <label for="state" >State</label>
+                <select name="state">
+                    <option value="" disabled selected>--Please choose an option--</option>
+                    <option value="ga">Georgia</option>
+                    <option value="fl">Florida</option>
+                    <option value="tx">Texas</option>
+                </select>
+        
+                <label for="zip" >Zip Code</label>
+                <input type="text" name="zip" />
+                
+            </fieldset>
+        
+            <fieldset>
+                <legend>Your Custom Donut</legend>
+                <h2>Type</h2>
+                <label>
+                <input type="radio" id="standard" name="donut-type" value="standard"  /> Donut with Hole (aka the Standard)</label>
+                <label>
+                <input type="radio" id="filled" name="donut-type" value="filled" checked/> Filled Donut </label>
+                <label>
+                <input type="radio" id="holes" name="donut-type" value="holes" /> Donut Holes </label>
+        
+                <h2>Toppings</h2>
+                <div>
+                    <label for="choco-icing"> <input type="checkbox" name="choco-icing" value="choco-icing"/> Chocolate Icing </label>
+                    <label for="sprinkles"> <input type="checkbox" name="sprinkles" value="sprinkles"/> Sprinkles </label>
+                    <label for="powdered-sugar"> <input type="checkbox" name="powdered-sugar" value="powdered-sugar"/> Powdered Sugar </label>
+                </div>
+        
+                <h2><label for="customizations">Custom Instructions</label></h2>
+                <div>
+                    <textarea name="customizations">
+        Put your special donut instructions here...
+                    </textarea>
+                </div>
+            </fieldset>
+        
+            <input type="submit" />
+        </form>        
+    </body>
+</html>
