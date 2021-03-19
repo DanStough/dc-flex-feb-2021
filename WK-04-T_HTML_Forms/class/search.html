@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Pie</title>
+</head>
+<body>
+  <header>
+    Search my pie
+  </header>
+  <form action="index.html" method="POST" enctype="application/x-www-form-urlencoded">
+
+    <fieldset>
+      <legend>Pie Order Info:</legend>
+      <fieldset>
+        <legend>Contact:</legend>
+        <label for="customer-name">Your name:</label>
+        <input type="text" name="customer-name"><br>
+
+        <label for="customer-emaill">Your email:</label>
+        <input type="email" name="customer-email"><br>
+
+        <label for="customer-phone">Your phone:</label>
+        <input type="tel" name="customer-phone"><br>
+
+        <label for="customer-address"> Home Address</label>
+        <input type="text" name="customer-address" id="customer-address">
+      </fieldset>
+      <p>
+        <label for="feedbackText">Give Feedback:</label>
+        <textarea name="feedbackText" id="" cols="30" rows="10">You had a ...
+        </textarea><br>
+        
+        <label for="love-severity">Love-Severity: </label>
+        <input type="number" name="love-severity">
+
+        <input type="hidden" name="source" value="Pie Order Form">
+      </p>
+    </fieldset>
+    <input type="submit" value="Send Pie Order">
+  </form>
+  <form action="">
+    <fieldset>
+      <legend>System Info:</legend>
+      <label for="issue-date">Issue Date:</label>
+      <input type="date" name="issue-date"><br>
+      <label for="issue-time">Issue Time:</label>
+      <input type="time" name="issue-time"><br>
+
+    </fieldset>
+  </form>
+</body>
+</html>
