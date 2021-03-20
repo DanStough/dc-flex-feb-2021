@@ -1,0 +1,35 @@
+.box {
+  float: left;
+  padding: 40px 0;
+  text-align: center;
+  width: 100px;
+}
+
+.lavender {
+  background-color: lavender;
+}
+.cornsilk {
+  background-color: cornsilk;
+}
+.cornflowerblue {
+  background-color: cornflowerblue;
+}
+.cadetblue {
+  background-color: cadetblue;
+}
+.lightsteelblue {
+  background-color: lightsteelblue;
+}
+.thistle {
+  background-color: thistle;
+}
+.darkkhaki {
+  background-color: darkkhaki;
+}
+.peachpuff {
+  background-color: peachpuff;
+}
+
+.clear {
+  clear: both;
+}
