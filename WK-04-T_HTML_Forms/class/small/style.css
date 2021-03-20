@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(72, 176, 176);
+}
+
+.container {
+  /* overflow: auto; */
+  /* since all the elements are floating,
+     setting overflow will allow the rest of
+     the layout to flow properly */
+}
+
+.container-menu {
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style-type: none;
+  /* width: 100px; */
+}
+
+.container-menu li {
+  display: inline;
+}

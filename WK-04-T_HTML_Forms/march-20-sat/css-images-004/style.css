@@ -1,0 +1,16 @@
+body {
+  background-color: aquamarine;
+}
+
+.container {
+  height: 200px;
+  overflow: hidden;
+  width: 300px;
+  margin: 0 auto;
+}
+
+img {
+  width: 353%;
+  margin-top: -210px;
+  margin-left: -172px;
+}

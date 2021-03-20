@@ -1,0 +1,13 @@
+#app {
+  text-align: center;
+  background-color: antiquewhite;
+}
+
+.container {
+  
+}
+
+img {
+  border: 5px solid red;
+  border-radius: 50%;
+}

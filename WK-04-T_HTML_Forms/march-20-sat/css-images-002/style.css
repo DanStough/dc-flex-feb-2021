@@ -1,0 +1,17 @@
+body {
+  background-color: aquamarine;
+}
+
+     .container {
+  border: 3px solid red;
+  width: 200px;
+  height: 200px;
+  /* works for horizontal center */
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+img {
+  /* border-radius: 50%; */
+}
