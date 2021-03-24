@@ -33,9 +33,9 @@
 // splitAmount(40, 'fair', 2) --> 23
 
 function tipAmount( good, fair, poor ) {
-    good = (20/100);
-    fair = (15/100);
-    poor = (10/100);
+   let good = (20/100);
+   let fair = (15/100);
+   let poor = (10/100);
         return (good)*100;
 }
 
