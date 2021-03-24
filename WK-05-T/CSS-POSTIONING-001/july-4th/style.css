@@ -1,0 +1,34 @@
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+  background-color: aqua;
+}
+
+.container {
+  position: relative;
+  border: 3px solid blue;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.text-container {
+  color: whitesmoke;
+  /* position: fixed always view port,  */
+  /* position: absolute parent div */
+  position: absolute;
+  top: 70%;
+  left: 0;
+  text-align: center;
+  border: 3px solid red;
+  width: 100%;
+}
+
+.text-container h1 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.text-container p {
+  margin: 0;
+}

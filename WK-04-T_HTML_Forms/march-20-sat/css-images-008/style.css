@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  float: left;
+  text-align: ;
+}
+
+.lavender {
+  background-color: lavender;
+}
+.cornsilk {
+  background-color: cornsilk;
+}
+.cornflowerblue {
+  background-color: cornflowerblue;
+}
+.cadetblue {
+  background-color: cadetblue;
+}
+.darkkhaki {
+  background-color: darkkhaki;
+}
+.lightsteelblue {
+  background-color: lightsteelblue;
+}
+.thistle {
+  background-color: thistle;
+}
+.peachpuff {
+  background-color: peachpuff;
+}
+
+.clear {
+  /* clear left side */
+  clear: both;
+}

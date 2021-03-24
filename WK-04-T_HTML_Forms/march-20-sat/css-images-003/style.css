@@ -4,6 +4,7 @@ body {
 
 .container {
   border: 2px solid red;
+  /* center in the page */
   margin: 0 auto;
   
   width: 300px;
@@ -12,5 +13,6 @@ body {
 }
 
 img {
+  /* fill in the container */
   width: 100%;
 }
