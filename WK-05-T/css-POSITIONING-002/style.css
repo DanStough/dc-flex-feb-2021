@@ -1,0 +1,39 @@
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  /* rid of horizontal scroll bar */
+  width: 100%;
+}
+.container {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  border: 3px solid red;
+}
+
+.text-container {
+  color: whitesmoke;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 45%;
+  left: 0px;
+
+}
+
+.text-container h1 {
+  
+  font-size: 1.25rem;
+  margin: 0;
+  border: 3px solid blue;
+}
+
+.text-container {
+  margin: 0;
+  border: 3px solid yellowgreen;
+}
