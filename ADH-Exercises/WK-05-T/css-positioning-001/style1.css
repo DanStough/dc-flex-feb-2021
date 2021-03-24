@@ -1,0 +1,26 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 320px;
+  height: 568px;
+}
+
+.text-container {
+  color: white;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  width: 100%;
+}
+
+.text-container h1 {
+  font-size: 1rem;
+}
