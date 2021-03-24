@@ -10,3 +10,14 @@
 // Write a function "helloDefault" such that if no name is given it will return
 // 'Hello, world!'
 // Otherwise it behaves the same as the "hello" function.
+function hello(name) {
+    return "Hello, Avery"
+}
+
+console.log(hello())
+
+function greet(name, lastName) {
+    console.log("Hello, " + name + " " + lastName);
+}
+hello()
+greet("Avery", " Hampton")
