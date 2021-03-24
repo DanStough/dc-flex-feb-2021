@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Medium HTML Excercises!</h1>
+    </head>
+    <hr style="border:1px solid black; margin: 0 0 1px">
+    <body>
+        <div>
+        <h3>Create a form that allows a user to order a pizza.</h3>
+        <fieldset>
+            <legend>Order a Pizza</legend>
+            <form>
+                <label for="pizza-size"><b>Size</b></label>
+                <select name="size" id="size">
+                    <option value="" disabled selected>--Please choose an option--</option>
+                    <option value="small">Small 8"</option>
+                    <option value="medium">Medium 10"</option>
+                    <option value="large">Large 12"</option>
+                    <option value="new-york">New York Large 16"</option>
+                </select>
+                <label for="crust"><b>Crust Options</b></label>
+                <select name="crust" id="crust">
+                    <option value="" disable selected>--Please choose an option--</option>
+                    <option value="pan">Pan Pizza</option>
+                    <option value="deep-dish">Deep Dish</option>
+                    <option value="brick-oven">Brick Oven</option>
+                    <option value="hand-tossed">Hand Tossed</option>
+                    <option value="stuffed-crust">Stuffed Crust</option>
+                </select>
+                <label for="toppings"><b>What kind of toppings would you like?</b></label>
+                    <label><input type="checkbox"/>Pepperoni</label>
+                    <label><input type="checkbox"/>Jalepeno</label>
+                    <label><input type="checkbox"/>Mushrooms</label>
+                    <label><input type="checkbox"/>Extra Jalepenos</label>
+                    <label><input type="checkbox"/>Banana Peppers</label>
+            </form>
+        </fieldset>
+        </div>
+    <br><br>    
+        <div>
+            <fieldset>
+                <legend>Delivery Instructions</legend>
+                <form>
+                    <label for="del-or-pu"><b>Delivery or Pick-Up:</b></label>
+                    <input type="radio" id="delivery" name="del-or-pu" value="delivery" checked/>
+                    <label>Contactless Delivery</label>
+                    <input type="radio" id="pickup" name="del-or-pu" value="pickup"/>
+                    <label>Pick-Up</label>
+                </form>
+                <br><br>
+                    <label for="address"><b>Street Address:</b></label>
+                    <input type="text">
+                    <label for="city"><b>City:</b></label>
+                    <input type="text">
+                    <label for="state"><b>State:</b></label>
+                    <select name="size" id="size">
+                        <option value="" disable selected>--Please choose an option--</option>
+                        <option value="Tx">Texas</option>
+                        <option value="Wy">Wyoming</option>
+                    </select>
+                    <label for="zip"><b>Zip Code:</b></label>
+                    <input type="text">
+                    <input type="submit" style="height:50px; width:100px" />
+                    <br><br>
+                    <label for="additional-instructions"><b>Additional Instructions:</b></label>
+                    <br>
+                    <textarea name="additional-instructions" rows="4" cols="170"></textarea>        
+            </fieldset>
+        </div>
+    </body>
+</html>
