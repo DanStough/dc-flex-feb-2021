@@ -1,0 +1,9 @@
+h1 {
+  text-align: center;
+}
+.image-001 {
+  margin: 0 auto;
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
+}
