@@ -1,0 +1,19 @@
+ *{
+   box-sizing: border-box;
+ }
+
+ .leader {
+  background-color: #ccc;
+  overflow: auto;
+}
+
+.leader p,
+ .leader img{
+  float: left;
+  Width: 50%;
+}
+
+.leader p{
+  padding; 0 10px;
+}
+

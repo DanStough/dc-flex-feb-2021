@@ -1,0 +1,111 @@
+// Conditionals
+// Greater / Less than >,<
+// Greater  or Equal than >=, <=
+// Equal == (e.g 1  ==, "1")
+// Strickly Equal === (Used more)
+// Not! (opposite)
+// if statements always wqork on true or false
+// result of a conditional is a boolean
+// else - if not true do this
+
+
+// Array
+//let students = ["Phillip". "Teila","Kingsley", "Luqmaan", "Logam", "Robby", "Avery", "Ted"]
+// students.push('Stephen');
+//let the Cheese - Students.pop()
+
+//console.log (students.join())
+//console.log ()
+
+
+// For Loops
+// Lets Print out name if Students
+//let students = ["Phillip". "Teila","Kingsley", "Luqmaan", "Logam", "Robby", "Avery", "Ted"]
+
+
+//function printStudents(students) {
+  //  for (let i=0; i<stendents.length; i++){
+    //    console.log( students[i] )
+    //}
+//}
+
+//printStudents(students)
+
+// Group Breakout 
+//Class Work 
+// JS 101 Exercises (21-27) 
+// https://learn.digitalcrafts.com/flex/lessons/solving-problems-using-code-js/js-101/exercises.html#small
+
+//21. threeFruits()
+//You can create an Array using the [] characters, with commas separating the individual values.
+//Define a function called threeFruits(). Declare a fruits variable whose value is the Array ['Apple', 'Banana', 'Cherry']
+//Return the array of fruit strings.
+**************************************Answer *******************************************
+function threeFruits () {
+let threeFruits = ["Apple", "Banana", "Cherry"];
+return threefriuts;
+}
+console.log "Apple","Banana","Cherry"
+
+
+//22. multipleTypes()
+An Array can contain multiple types. ie: strings, numbers, boolean, etc.
+
+Define a function called multipleTypes(). Declare a diverseArray variable whose value is the Array ['Skateboard', null, 8.75, 'Eiffel Tower', 44, 7, true, null].
+
+Return the array of values.
+
+
+**************************************Answer *******************************************
+
+//23. indexAccess()
+You can access individual values of an array using bracket notation shown below. Remember that arrays start at index 0. So for an array myArray the first item can be accessed at myArray[0].
+
+Define a function called indexAccess(). In the function, create a people array with the names of 6 people. (These names should be strings!)
+
+Return the third item from the people array.
+
+**************************************Answer *******************************************
+
+//24. useLength()
+Define a function called useLength(). In the function, create an arr array that contains the strings
+'a', 'b', and 'c'. Return the length of the array
+**************************************Answer *******************************************
+
+//25. usePush()
+Define a function called usePush() with an arr variable. arr should be an array that contains the strings 'a', 'b', and 'c'.
+
+Add the string 'd' to the end of an array using the push method
+
+**************************************Answer *******************************************
+
+//26. seIndefOf()
+You can search an array for an item using the .indexOf() method. This method accepts a value as an argument.
+
+It returns either:
+
+the first index of an item that matches the argument
+or -1 if there are no matching items
+Create a function called useIndexOf() with an array arr. The array should hold the values 'C', 'A', 'G', 'T', 'A', 'A', 'G', 'T'.
+
+Return the index of 'T'.
+
+**************************************Answer *******************************************
+
+
+//27.
+useJoin()
+You can convert an Array into a string using the .join() method.
+
+Define a useJoin() function with an array containing the strings 'a', 'b', 'c', 'd', 'e', 'f'.
+
+Return the string 'a-b-c-d-e-f'.
+
+**************************************Answer *******************************************
+
+
+
+
+
+
+

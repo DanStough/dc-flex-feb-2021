@@ -5,7 +5,9 @@
 // - hello('banana') should return 'Hello, banana!'
 // - hello('DETROIT') should return 'Hello, DETROIT!'
 
-
+function hello(name) {
+    return "Hello, " + name "!";
+}
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "helloDefault" such that if no name is given it will return
 // 'Hello, world!'

@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  font-family: Lato;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 300px;
+}
+
+.text-container {
+  color: white;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  width: 100%;
+}
+.text-container h1 {
+  font-size: 16;
+  margin: 0;
+}
+.text-container p {
+  margin: 0;
+  text-align: center;
+}
+img {
+  width: 100%;
+}

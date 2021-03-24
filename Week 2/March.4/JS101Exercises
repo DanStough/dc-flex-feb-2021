@@ -1,0 +1,129 @@
+// Small 
+//Numbers
+// Lets write some functions that
+// 1.) Create a Variable
+// 2.) Return it
+
+
+// 1. Define a function called makeaNumber () Declare a  variable myNum and assign any number to it and return myNum
+
+//function makeaNumber () {
+//var myNum = 37;
+//return myNum;
+//}
+
+
+//2-4 Same examples
+
+//undefined , Booleans, and null
+
+//5. Define a function called makeNothing () . Declare a variable huh and assign nothing to it, then return huh
+
+//function makeNothing () {
+// var huh;
+//return huh;
+//}
+
+// 6. Define a function called makeBoolean (). Decalre a variable myBoo1 and 
+//assign it either true or false, then return myBoo1
+
+//function makeBoolean () {
+//var myBoo1 = true;
+//    return myBoo1;
+//}
+
+//function makeBoolean () {
+//var myBoo1 = false;
+  //  return myBoo1;
+//}
+
+//7. Define a function called makeTrue (). Decalre a variable yep and 
+//assign boolean true, and then return yep
+
+//function makeTrue () {
+ //   var yep = True ;
+//    return yep;
+//}
+
+//8. Define a function called makeTrue (). Decalre a variable yep and 
+//assign boolean false, and then return yep
+
+//function makeTrue () {
+ //   var yep = False ;
+ //   return yep;
+//}
+//9. Define a function called makeNull (). Decalre a variable nothingMuch and 
+//assign null to it, and then return nothing much
+
+//function makeNull() {
+//    var nothingMuch = null;
+//    return null;
+//}
+
+//10. Define a function called helloworld (). Return the string "Hello World".
+
+//function helloWorld() {
+//    return "Hello World;
+//}
+//****************************Homework*******************************************
+
+// 11. Abstract helloName ()
+// Define a function called helloName () that accepts 1 parameter (arity of 1) . Use the symbol "name for the parameter name
+
+//function helloName() {
+  //  }
+    //return the string Hello, name ! where naem is the value passed to the function
+
+    //function helloName(name) {
+    //return "Hello," + name + "!";
+//}
+
+//12. abstractLength
+//Return the length of the string "tarpitAbstract" defined below. 
+
+//function abstractLength () {
+  //var tarPitAbstract = 'Complexity is the single mayjor difficulty in USA'
+    //return tarPitAbstract.length;
+   // }
+//16. add ()
+//Create a function add () that takes 2 arguments and sums them together.
+//Assume that both arguments are numbers. 
+
+//function add (a,b) {
+  // ? dont you need to declare what a and b is in order to calculate and wound it be
+    //var a = 10
+    //var b = 30
+//return a + b; 
+//}
+
+//17. subtract()
+//Create a function subtract() that takes 2 number arguments and returns their difference (i.e. the second number subtracted from the first number).
+
+//function subtract (a,b) {
+  // return a - b; 
+//}
+//console.log (subtract (30,10))
+
+//18. Multiply ()
+ //Create a function multiply() that takes 2 number arguments and returns their their product
+
+ //function multiply (a,b) {
+   //return a * b; 
+//}
+//console.log (multiply (30,10))
+
+//19.divide ()
+//Create a function divide() that takes 2 number arguments and Diide the first argument by the second return the result
+
+//function divide (a,b) {
+//return a/b; 
+//}
+//console.log (divide (30,10))
+
+//20. mod ()
+//Create a function mod() that takes 2 number arguments and Diide the first argument by the second return the result
+
+function mod (a,b) {
+return a % b; 
+}
+console.log (mod (30,4))

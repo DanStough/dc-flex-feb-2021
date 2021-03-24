@@ -1,0 +1,12 @@
+body {
+  background-color: white;
+}
+.container {
+  width: 300px;
+  height: 500px;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+}

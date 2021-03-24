@@ -1,0 +1,31 @@
+// Write a function "hello" that takes one argument (a name), and returns a
+// string that says hello to the name.
+// Examples:
+// - hello('Mustache') should return 'Hello, Mustache!'
+// - hello('banana') should return 'Hello, banana!'
+// - hello('DETROIT') should return 'Hello, DETROIT!'
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Write a function "helloDefault" such that if no name is given it will return
+// 'Hello, world!'
+// Otherwise it behaves the same as the "hello" function.
+// © 2021 GitHub, Inc.
+
+
+//************************** Answer *****************************
+
+function helloName (name) {
+return "Hello," + name;
+}
+console. log (helloName ("Teila"))
+
+function helloDefault (name) {
+
+if (!name){
+return "Hello, World!";
+}else{
+return "Hello," + name;
+}
+}
+console. log (helloDefault (""))

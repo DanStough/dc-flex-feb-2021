@@ -1,0 +1,12 @@
+h1 {
+  text-align: center;
+}
+body {
+  background-color: purple;
+}
+.container {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+}

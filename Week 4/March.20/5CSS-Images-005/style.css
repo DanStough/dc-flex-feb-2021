@@ -1,0 +1,7 @@
+body {
+  background-color: rgb(46, 43, 226);
+}
+.container {
+  float: left;
+  margin-right: 20px;
+}
