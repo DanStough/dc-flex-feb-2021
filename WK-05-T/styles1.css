@@ -8,9 +8,31 @@ position: relative;
 width: 320px;
 }
 
-img {
-    width: 320px;
-    height: 568px;
+.first-image {
+
+}
+
+.transbox {
+    background-color:rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+.transbox p {
+    margin-left: 10%;
+    font-weight: bold;
+    color: #000;
+}
+
+.second-image {
+    top: 1%;
+    right: 1%;
+    border-radius: 25px;
+    height: 40px;
+    overflow: hidden;
+    width: 40px;
+    position: absolute;
 }
 
 .text-container {
@@ -30,4 +52,28 @@ margin: 0;
 .text-container p {
 font-size: 1rem;
 margin: 0;
+}
+
+li {
+    display: inline-block;
+    margin-left: 6px;
+}
+
+ul {
+    width: 70%;
+}
+
+.privacy-policy {
+    background-color: rgb(48, 83, 126);
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    text-align: center;
+}
+
+.privacy-policy p {
+    color: white;
+    font-weight: bold;
+    font-size: 0.6rem;
 }
