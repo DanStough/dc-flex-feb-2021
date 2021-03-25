@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container {
+  position: relative;
+  width: 300px;
+}
+
+.text-container {
+  color: white;
+  left: 0;
+  position: absolute;
+  top: 70%;
+  text-align: center;
+  width: 100%;  
+}
+
+.text-container h1 {
+  font-size: 1.25rem; /*1 rem is 16px, its a relative size*/
+  margin: 0;
+}
+
+.text-container p {
+  margin: 0;
+}

@@ -1,0 +1,14 @@
+*{
+  box-sizing: border-box;
+}
+.cast {
+  background-color: #ccc;
+  overflow: auto;
+}
+.cast p , .cast img{
+  float: left;
+  width: 50%;
+}
+.cast p{
+  padding: 0 10px;
+}

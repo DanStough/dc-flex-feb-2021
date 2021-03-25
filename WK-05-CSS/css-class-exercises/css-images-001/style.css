@@ -1,0 +1,10 @@
+h2 {
+  text-align: center;
+}
+.crop {
+  /* border: 3px solid crimson; */
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}

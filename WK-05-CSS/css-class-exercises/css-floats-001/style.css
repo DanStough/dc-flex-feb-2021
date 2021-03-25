@@ -1,0 +1,11 @@
+h2 {
+  text-align: center;
+}
+.float {
+  float: left;
+  margin-right: 20px;
+}
+/* img {
+  margin: 20px 20px;
+  float: left;
+} */

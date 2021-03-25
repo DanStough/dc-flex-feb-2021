@@ -1,0 +1,15 @@
+h2{
+  text-align: center;
+}
+.cast {
+  /* border: 3px solid crimson; */
+  margin: 0 auto;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+img {
+  margin-left: -80px;
+  margin-top: -100px;
+  width: 180%;
+}

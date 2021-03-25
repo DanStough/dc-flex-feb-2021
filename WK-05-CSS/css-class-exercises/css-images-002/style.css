@@ -1,0 +1,12 @@
+.circle {
+  /* border: 3px solid crimson; */
+  border-radius: 50%;
+  
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+h2 {
+  text-align: center;
+}
