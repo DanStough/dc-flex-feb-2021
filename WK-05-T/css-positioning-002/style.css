@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.header-bar{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    padding: 28px 0;
+    width: 328px;
+    opacity: 40%;
+}
+
+.container{
+    position:relative;
+    width: 328px;
+    height: 569px;
+}
+
+.text-container{
+    text-align: center;
+    color: white;
+    left:0;
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    font-size: .95em;
+}
+
+.nav-bar{
+    position: fixed;
+    width: 100%;
+    position: absolute;
+    padding-left: 25px;
+    
+}
+
+.nav-bar p{
+    text-align: center;
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+
+.text-container h1{
+    margin: 0;
+}
+
+.text-container p{
+    margin: 0;
+}
+
+.footer-bar{
+    background-color:rgb(61, 100, 150);
+    width: 100%;
+    position:absolute;
+    bottom: 0%;
+}
+
+.footer-bar p{
+    margin: 8px;
+    text-align: center;
+    color: white;
+    font-size: .7em;
+}
+
+.profile{
+    width: 3em;
+    position:absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    margin: 8px 8px;
+    overflow: hidden;
+    border-radius: 50%;
+    }
+
+.profile img{
+    width: 175%;
+    margin-left: -.79em;
+    margin-top: -.35em;
+}
