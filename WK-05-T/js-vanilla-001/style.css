@@ -7,7 +7,7 @@
 
 img {
   /* rid of horizontal scroll bar */
-  width: 100%;
+  /* width: 100%; */
 }
 .container {
   /* parent container for header nav */
