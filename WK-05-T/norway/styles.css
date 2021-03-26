@@ -34,3 +34,41 @@
 img {
     width: 100%;
 }
+
+/* .box {
+    background-color: white;
+    border: 1px color blue;
+    width: 320px;
+    height: 50px; */
+    
+
+}
+.white {
+    border: 1px color red;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+.img-container {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: right;
+    
+}
+
+.banner {
+    border: 1px solid red;
+    display: inline;
+    width: auto;
+}
+
