@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  background-color: azure;
+}
+
+div {
+  border: 3px solid blue;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  /* horizontally center */
+  margin: auto 0;
+  overflow: hidden;
+}

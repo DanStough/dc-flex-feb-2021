@@ -1,7 +1,6 @@
 * {
-  background-color: aquamarine;
+  background-color: lightblue;
   box-sizing: border-box;
-  /* border: 3px solid red; */
 }
 
 .container {
@@ -10,9 +9,4 @@
   height: 200px;
   border-radius: 100px;
   overflow: hidden;
-  margin: 0 auto;
-}
-
-img {
-
 }

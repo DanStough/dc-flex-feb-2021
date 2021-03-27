@@ -1,10 +1,15 @@
 body {
   background-color: aquamarine;
+  box-sizing: border-box;
 }
 
+div {
+  border: 2px solid blue;
+}
 .container {
+  /* photo width 260 so set it 260px for img container */
   width: 260px;
-  margin: 0 auto;
   height: 260px;
+  /* take the any overflowing img out of the container height */
   overflow: hidden;
 }
