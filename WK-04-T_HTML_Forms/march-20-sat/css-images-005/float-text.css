@@ -1,0 +1,13 @@
+* {
+  background-color: antiquewhite;
+  box-sizing: border-box;
+}
+
+div, p , img {
+  border: 2px solid red;
+}
+
+.container {
+  float: left;
+  margin-right: 20px;
+}

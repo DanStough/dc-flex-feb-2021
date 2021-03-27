@@ -1,13 +1,16 @@
-body {
+* {
   background-color: aquamarine;
+}
+
+.container, img, p {
+  border: 3px solid blue;
 }
 
 .container {
   float: left;
-  border: 3px solid fuchsia;
   margin-right: 20px;
 }
 
 img {
-  /* float: left; */
+
 }

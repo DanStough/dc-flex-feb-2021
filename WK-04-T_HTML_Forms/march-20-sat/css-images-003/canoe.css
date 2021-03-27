@@ -1,9 +1,10 @@
 * {
   box-sizing: border-box;
+  background-color: antiquewhite;
 }
 
-img, div {
-  border: 2px solid blue;
+div, img {
+  border: 3px solid blue;
 }
 
 .container {
@@ -14,7 +15,5 @@ img, div {
 }
 
 img {
-  width: 184%;
-  margin-top: -100px;
-  margin-left: -80px;
+  width: 100%;
 }
