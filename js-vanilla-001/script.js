@@ -1,5 +1,5 @@
 // importing the stylesheet
-import "./style.css";
+// import "./style.css";
 
 // Begin the assignment
 const appDiv = document.getElementById('app');
@@ -36,11 +36,11 @@ avatarDiv.className = "avatar";
 containerDiv.appendChild(avatarDiv);
 // picture of woman within avatar div
 const avatarPic = document.createElement('img');
-image.src = "https://picsum.photos/id/64/600/";
+avatarPic.src = "https://picsum.photos/id/64/600/";
 avatarDiv.appendChild(avatarPic);
 // Image within the container div
 const mainImage = document.createElement('img');
-image.src = "https://picsum.photos/id/1015/320/568";
+mainImage.src = "https://picsum.photos/id/1015/320/568";
 containerDiv.appendChild(mainImage);
 // text-container class
 const textContainer = document.createElement('div');
