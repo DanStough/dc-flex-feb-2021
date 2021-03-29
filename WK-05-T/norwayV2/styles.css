@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nav-bar {
+    /* border: 1px solid red; */
+    height: 68px;
+    position: absolute;
+    width: 320px;
+    background-color: rgba(255, 255, 255, 0.334);
+    /* opacity: 40%; */
+}
+
+.nav1 {
+    /* border: 1px solid blue; */
+    height: 68px;
+    width: 86px;
+    position: absolute;
+    top: 0px;
+}
+
+.nav2 {
+    /* border: 1px solid green; */
+    height: 68px;
+    width: 86px;
+    position: absolute;
+    left: 86px;
+    top: 0px;
+}
+
+.nav3 {
+    /* border: 1px solid yellow; */
+    height: 68px;
+    width: 86px;
+    position: absolute;
+    left: 172px;
+    top: 0px;
+}
+
+.profilepic {
+    /* border: 1px solid black; */
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: right;
+    position: absolute;
+    top: 8.5px;
+    left: 264px;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    top: 22px;
+    color: black;
+}
+
+.text-container {
+    /* border: 1px solid green; */
+    color: white;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    width: 320px;
+}
+p {
+    position: absolute;
+    text-align: center;
+    width: 320px;
+    top: 120%;
+    margin: auto;
+}
+
+.footer p {
+    /* border: 1px solid hotpink; */
+    background-color: rgb(26, 58, 122);
+    width: 320px;
+    height: 30px;
+    position: absolute;
+    top: 539px;
+    color: white;
+    margin: auto;
+}
+
+.background {
+    /* border: 1px solid hotpink; */
+    width: 320px;
+    height: 568px;
+}
+
+
