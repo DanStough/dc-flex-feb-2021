@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  background-color: goldenrod;
+}
+
+div {
+  border: 2px solid blue;
+}
+
+.box {
+  float: left;
+  border: 2px solid blue;
+  width: 100px;
+  padding: 40px 0;
+  /* height: 100px; */
+  text-align: center;
+}
+
+.lavender {
+  background-color: lavender;
+}
+.cornsilk {
+  background-color: cornsilk;
+}
+.cornflowerblue {
+  background-color: cornflowerblue;
+}
+.cadetblue {
+  background-color: cadetblue;
+}
+.darkkhaki {
+  background-color: darkkhaki;
+}
+.lightsteelblue {
+  background-color: lightsteelblue;
+}
+.thistle {
+  background-color: thistle;
+}
+.peachpuff {
+  background-color: peachpuff;
+}
+/* clear the float prev element so that current ele starts a new row 
+   and later elements comes after the current clear*/
+.clear {
+  clear: both;
+}

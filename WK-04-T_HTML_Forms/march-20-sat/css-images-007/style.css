@@ -1,22 +1,25 @@
 * {
   /* when width doesn't fit use border-box  gets rid of border width*/
   box-sizing: border-box;
-  font-family: sans-serif;
-}
-body {
-  background-color: red;
+  background-color: aqua;
 }
 
+div, p, img {
+  border: 3px solid blue;
+}
 .container {
-  background-color: #ccc;
+  background-color: #ccc;  
+  margin-bottom: 10px;
+  /* parent container respects height of its children floated elements
+  keep this container div from collapsing height */
   overflow: auto;
 }
 
 .container p, .container img {
+  background-color: yellowgreen;
   float: left;
   width: 50%;
-}
-
-.container p {
-  padding: 0 10px;
+/* since both element inside of container is floating
+  container div no longer has any height or collapsing
+*/
 }

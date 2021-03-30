@@ -1,0 +1,40 @@
+* {
+  /* background-color: antiquewhite; */
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  position: relative;
+  /* border: 3px solid orangered; */
+  width: 300px;
+  margin: 0 auto;
+
+}
+
+img {
+  width: 100%;
+}
+
+
+.text-container {
+  /* position relative to the parent */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* border: 3px solid purple; */
+  text-align: center;
+  width: 100%;
+  top: 70%;
+  color: tan;
+}
+
+.text-container h1 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.text-container p {
+  margin: 0;
+  font-size: 1rem;
+}

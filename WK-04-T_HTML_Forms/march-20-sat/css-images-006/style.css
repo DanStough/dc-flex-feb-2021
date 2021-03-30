@@ -1,9 +1,13 @@
-body {
+* {
   background-color: aquamarine;
+  box-sizing: border-box;
+}
+
+div, img, p {
+  border: 3px solid blue;
 }
 
 .container {
   float: right;
-  border: 3px solid orange;
   margin-left: 20px;
 }
