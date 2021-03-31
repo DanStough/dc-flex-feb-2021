@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  margin: 0;
+  position: relative;
+  width: 320px;
+  height: 560px;
+}
+
+.text-container {
+  color: white;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 70%;
+  width: 100%;
+}
+
+.text-container h1 {
+  margin: 0;
+}
+
+.text-container p {
+  margin: 0;
+}
+
+.banner-container {
+  font-size: 0.7rem;
+  background-color: skyblue;
+  float: right;
+  list-style-type: none;
+  height: 3rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.banner-container li {
+  display: block;
+  float: left;
+  padding: 1em;
+}
+
+.image-container {
+  overflow: hidden;
+  float: right;
+  margin-right: 20px;
+}
