@@ -30,6 +30,10 @@
   display: inline-block;
 }
 
-.sunglasses img {
-  top: auto;
+.sunglasses {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border-radius: 75%;
+  margin: 0 auto;
 }
