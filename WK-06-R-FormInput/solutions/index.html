@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dan's Super List</title>
+        <script src="./index.js"></script>
+    </head>
+    <style>
+        body {
+            margin: auto;
+            width: 800px;
+        }
+    </style>
+    <body>
+        <h1>Dan's Super List</h1>
+
+        <h2>Fill in your S*</h2>
+        <form id="task-form">
+            <fieldset>
+            <p>
+                <label for="task">Item</label>
+                <input name="task" type="text" required/>
+            </p>
+            <p>
+                <label for="category">Category</label>
+                <select name="category" required>
+                    <option value="" disabled selected>--Please choose an option--</option>
+                    <option value="home">Home</option>
+                    <option value="work">Work</option>
+                    <option value="other">Other</option>
+                </select>
+            </p>
+            <p>
+                <label><input name="done" type="checkbox" /> Complete? </label>
+            </p>
+            <input type="submit" />
+            </fieldset>
+          
+        </form>
+
+        <h2>S* to Do</h2>
+        <ul id="root">
+        </ul>
+    </body>
+</html>
