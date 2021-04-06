@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS vanilla Address book form</title>
+  <link rel="stylesheet" href="./form.css">
+</head>
+<body>
+  <div id="app"></div>
+  <h1>Address Book</h1>
+  <form id="form">
+    <fieldset>
+      <legend>Contact Details</legend>
+      <div>
+<!-- for in <label> must correspond to id in <input> 
+  name attribute in <input> field key names in data transfer
+-->
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+      </div>
+      <div>
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address">
+      </div>
+      <div>
+        <label for="cell">Cell Phone</label>
+        <input type="tel" name="cell" id="cell">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+      </div>
+    </fieldset>
+    <!-- <button type="submit" id="submit-button" value="submit"> -->
+    <button type="submit">Add Contact</button>
+  </form>
+  <script src="form.js"></script>
+</body>
+</html>
