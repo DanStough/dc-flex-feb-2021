@@ -1,26 +1,23 @@
-* {
-  font-family: sans-serif;
+body {
+  background-color: aqua;
 }
 
 .container {
+  background-color: cornflowerblue;
+  height: 300px;
+  width: 70%;
+  /* I am the parent element position absolute child should look at
+     set position: relative
+  */
   position: relative;
-  width: 300px;
 }
 
-.text-container {
-  color: white;
-  left: 0;
+.logo {
+  background-color: crimson;
+  height: 20px;
+  width: 20px;
+  /* I am position relative to you parent position relative! */
   position: absolute;
-  text-align: center;
-  top: 70%;
-  width: 100%;
-}
-
-.text-container h1 {
-  font-size: 1.25rem;
-  margin: 0;
-}
-
-.text-container p {
-  margin: 0;
+  left: 0;
+  top: 0;
 }

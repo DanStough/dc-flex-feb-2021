@@ -1,0 +1,38 @@
+.container {
+  border: 2px solid crimson;
+  /* display: flex; */
+  /* flex-direction: row; */
+
+  /* align-items: flex-end; */
+  /* flex-direction: column; */
+  /* align-items: stretch; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  /* justify-content: center; */
+}
+
+.container__item {
+  width: 200px;
+  /* fixed height you can see things in flex-direction: column */
+  /* height: 100px; */
+  margin: 10px;
+  border: 2px solid crimson;
+  background-color: greenyellow;
+}
+
+.container__item-1 {
+  min-height: 300px;
+  order: 3;
+}
+
+.container__item-2 {
+  min-height: 100px;
+  order: 1;
+}
+
+.container__item-3 {
+  min-height: 200px;
+  /* take as much space as possible */
+  flex-grow: 1;
+  order: 2;
+}
