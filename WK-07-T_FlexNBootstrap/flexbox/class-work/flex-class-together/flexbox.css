@@ -1,0 +1,23 @@
+.logo-container {
+  border: 1px solid green;
+  height: 100%;
+  width: 160px;
+
+}
+
+nav {
+  display: flex;
+}
+
+.navs {
+  border: 1px solid crimson;
+  display: flex;
+}
+
+.nav li {
+  margin-left: 18px;
+}
+
+header {
+  background-color: aliceblue;
+}

@@ -10,13 +10,18 @@
 
 .logo-container {
   border: 1px solid blue;
+  height: 96px;
   width: 160px;
-  display: inline-block;
+  float: left;
 }
 
 .navs {
   border: 1px solid green;
   display: inline-block;
+  vertical-align: middle;
+  height: 96px;
+  margin-block-start: 0;
+  padding-inline-start: 0;
 }
 
 .navs li {
