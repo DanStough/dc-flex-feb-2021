@@ -1,23 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .logo-container {
   border: 1px solid green;
   height: 100%;
   width: 160px;
-
 }
 
 nav {
   display: flex;
+  justify-content: space-between;
 }
 
 .navs {
+  /* when in row align items top to bottom */
+  align-items: center;
   border: 1px solid crimson;
   display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 30%;
 }
 
-.nav li {
-  margin-left: 18px;
+.navs li {
+  /* margin-left: 18px; */
 }
 
 header {
   background-color: aliceblue;
+}
+
+.selected {
+  color: blueviolet;
+}
+
+.y-wrap {
+  margin: 0 auto;
+  width: 90%;
 }
