@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* img {
+  width: 100%;
+} */
+
+.logo-container {
+  border: 1px solid blue;
+  width: 160px;
+  display: inline-block;
+}
+
+.navs {
+  border: 1px solid green;
+  display: inline-block;
+}
+
+.navs li {
+  display: inline-block;
+}
