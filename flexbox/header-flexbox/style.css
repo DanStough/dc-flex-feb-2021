@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background-color: aliceblue;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.y-wrap {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.logo-container {
+  width: 160px;
+}
+
+.navs {
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+}
+
+.navs li {
+  margin-left: 18px;
+}
+
+.selected {
+  color: blueviolet;
+}
