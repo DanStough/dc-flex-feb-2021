@@ -1,0 +1,44 @@
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 3px solid yellowgreen; */
+}
+/* .container is parent of .text-container
+    Relative is set here to .text-container to anchor
+*/
+.container {
+  position: relative;
+  border: 3px solid plum;
+  width: 300px;
+  /* text-align: center; */
+  margin: 0 auto;
+}
+
+img {
+  border: 3px solid seagreen;
+  width: 100%;
+}
+
+/* .container is parent (position: relative) of .text-container
+    .text-container to anchors its relative parent since it is set position: absolute
+*/
+.text-container {
+  border: 3px solid coral;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.text-container h1 {
+  font-size: 1rem;
+}
+
+.text-container p {
+  margin: 0;
+}

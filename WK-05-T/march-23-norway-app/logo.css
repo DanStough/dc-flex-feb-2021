@@ -1,0 +1,27 @@
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* padding: 0;
+  margin: 0; */
+  box-sizing: border-box;
+
+}
+
+div, * {
+  /* border: 3px solid red; */
+}
+
+.container {
+  background-color: antiquewhite;
+  height: 300px;
+  width: 70%;
+  /* position: relative; */
+}
+
+.logo {
+  background-color: chocolate;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

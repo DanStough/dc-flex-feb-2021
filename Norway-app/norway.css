@@ -1,0 +1,22 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  border: 3px solid red; 
+  width: 320px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.text-container {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  color: white;
+  width: 100%;
+}

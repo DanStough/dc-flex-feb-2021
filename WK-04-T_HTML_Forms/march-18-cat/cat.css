@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div, p {
+  /* border: 2px solid red; */
+}
+
+.container {
+  margin: 0 auto;
+  /* border: 3px solid violet; */
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  /* 50% smaller of width */
+  border-radius: 100px;
+}
+
+#app {
+  /* width: 200px; */
+  text-align: center;
+}
+
+
+p {
+  margin: 6px 0;
+}
