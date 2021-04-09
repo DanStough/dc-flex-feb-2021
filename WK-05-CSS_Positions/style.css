@@ -1,79 +1,82 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
 
-.container {
-  margin: 0 auto;
-  position: relative;
-  width: 320px;
-  height: 568px;
+/* 
+************** HTML ELEMENTS ******************
+ */
 
+body {
+  font-family: sans-serif;
 }
 
-.text-container {
+footer {
+  background-color: #225482;
+  bottom: 0;
   color: white;
+  left: 0;
+  padding: 8px 0;
   position: absolute;
-  top: 45%;
   text-align: center;
   width: 100%;
 }
 
-.text-container h1 {
-  margin: 0;
-}
-
-.text-container p {
-  margin: 0;
-}
-
-.nav-bar {
-  position: absolute;
-  color: white;
-  padding-top: 1px;
+nav {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px 0;
+  position: fixed;
   width: 100%;
-  height: 50px;
-  top: 5px;
-  opacity: 0.80;
+}
+
+p {
+  margin: 4px 0;
+}
+
+/* 
+********************** HEADER AREA *****************
+ */
+
+.navs {
+  text-align: right;
+  width: 75%;
+}
+
+.navs li {
+  display: inline-block;
+  font-size: 0.875rem;
+  margin-left: 18px;
 }
 
 .avatar {
-  position: absolute;
-  height: 30px;
-  width: 30px;
+  border-radius: 100%;
+  height: 40px;
   overflow: hidden;
-  border-radius: 50%;
-  margin: 0 auto;
-  right: 8.5px;
-  top: 2px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
 }
 
 .avatar img {
   width: 100%;
 }
 
-.nav-items {
-  text-align: center;
+/* 
+******************* MAIN AREA ***********************
+ */
+
+.container {
+  position: relative;
 }
 
-.item {
-  float: left;
-  text-align: auto;
-  width: 90px;
-  margin: 0 auto;
-}
-
-/* Footer */
-.footer {
+.text-container {
+  color: white;
+  left: 0;
   position: absolute;
   text-align: center;
-  bottom: .6%;
-  display: block;
+  top: 40%;
   width: 100%;
-  margin-bottom: -4px;
-  padding: 15px;
-  background-color: #3b5998;
-  color: white;
 }
