@@ -1,0 +1,11 @@
+.dans-flexbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.dans-flex-item {
+    margin-bottom: 25px;
+}
