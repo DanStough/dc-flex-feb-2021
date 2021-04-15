@@ -5,8 +5,17 @@
   box-sizing: border-box;
 }
 
+p, h1 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
 .container {
-  border: 3px solid red; 
+  /* border: 3px solid red;  */
   width: 320px;
   position: relative;
   margin: 0 auto;
@@ -18,5 +27,73 @@
   top: 40%;
   left: 0;
   color: white;
+  /* 100% width of parent container (.container) */
+  width: 100%;
+}
+
+.text-container h1 {
+  margin-bottom: .4rem;
+}
+
+footer {
+  /* https://learn.digitalcrafts.com/flex/lessons/front-end-foundations/css-floats/#layout-example when adding the footer it's important to clear all previous floats.  */
+  clear: both;
+  /* border: 3px solid red; */
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(46, 170, 220, 1);
+  color: white;
+}
+
+footer p {
+  padding: 6px 0;
+}
+
+
+.header {
+  /* since all the el are floating, set
+     overflow will allow the rest of 
+     the layout to flow properly. */
+  /* overflow: auto; */
+  border: 3px solid blue;
+  /* nav to fixed to viewport */
+  position: fixed;
+  /* top: 0; */
+  /* currently in full width so bump it away from the avatar */
+  width: 100%;
+  background-color: rgba(102, 187, 221, .3);
+  padding: 20px 0;
+
+}
+
+.header-menu {
+  border: 3px solid red;
+  text-align: right;
+  width: 79%;
+}
+
+.header-menu li {
+  display: inline-block;
+}
+
+.header-menu > li:not(:last-child) {
+  margin-right: .8rem;
+}
+
+.user-img {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  border-radius: 100%;
+  right: 16px;
+}
+
+.user-img img {
   width: 100%;
 }

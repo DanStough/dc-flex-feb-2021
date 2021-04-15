@@ -1,0 +1,14 @@
+.menu {
+  list-style-type: none;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  float: left;
+}
+
+.menu > li:not(:last-child) {
+  margin-right: 10px;
+}

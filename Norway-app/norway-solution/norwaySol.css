@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+########## HTML Elements ##############
+*/
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav {
+  background-color: rgba(7, 202, 244, 0.3);
+  /* nav to fixed to viewport */
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+}
+
+footer {
+  /* https://learn.digitalcrafts.com/flex/lessons/front-end-foundations/css-floats/#layout-example when adding the footer it's important to clear all previous floats.  */
+  clear: both;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(12, 82, 233);
+  padding: 8px 0;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+p {
+  margin: 4px 0;
+}
+/* 
+########## HEADER AREA ###########
+*/
+.menu {
+  border: 1px solid crimson;
+  text-align: right;
+  /* currently in full width so bump it away from the avatar */
+  width: 75%;
+}
+
+.menu li {
+  display: inline-block;
+  font-size: 0.87rem;
+  margin-left: 18px;
+}
+
+/* 
+https://youtu.be/lGSU5d2aEI4?t=1252
+Matt video 
+*/
+.avatar {
+  /* border-radius: 100% makes img circle */
+  border-radius: 100%;
+  border: 2px solid red;
+  height: 40px;
+  width: 40px;
+  /* crop the img */
+  position: absolute;
+  overflow: hidden;
+  /* bring the img 50% down*/
+  top: 50%;
+  /* come back 50% of your own height img*/
+  transform: translateY(-50%);
+  right: 16px;
+}
+
+/* img doesn't listen to parents 
+    must put width 100% */
+.avatar img {
+  width: 100%;
+}
+
+
+/* 
+########## MAIN AREA ###########
+*/
+.container {
+  position: relative;
+}
+.text-container {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+/* 
+######### FOOTER AREA ##########
+*/
