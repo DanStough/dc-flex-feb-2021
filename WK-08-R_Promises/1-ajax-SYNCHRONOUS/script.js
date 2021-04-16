@@ -4,7 +4,7 @@ generateDogBtn.addEventListener('click', ()=>{
 
     // THIS IS OLD SCHOOL
     const request = new XMLHttpRequest();
-    request.open('GET', 'https://dog.ceo/api/breeds/image/random', false);  // `false` makes the request synchronous
+    request.open('GET', 'https://dog.ceo/api/breeds/image/randomdsfsfds', false);  // `false` makes the request synchronous
     request.send(null);
 
     if (request.status === 200) {
