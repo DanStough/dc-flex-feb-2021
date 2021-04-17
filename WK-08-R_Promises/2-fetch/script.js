@@ -4,15 +4,18 @@ generateDogBtn.addEventListener('click', ()=>{
 
     console.log("get a dog picture please")
 
-    // REPLACE ME AND LOG PROMISE
-    // const request = new XMLHttpRequest();
-    // request.open('GET', 'https://dog.ceo/api/breeds/image/random', false);  // `false` makes the request synchronous
-    // request.send(null);
+    fetch("https://dog.ceo/api/breeds/image/random")
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        const dogDiv = document.getElementById('dog-image-div');
 
-    // if (request.status === 200) {
-    //     console.log(request.responseText);
-    // }
-    // const data= JSON.parse(request.responseText)
+        const dogImageTag = document.createElement('img')
+        dogImageTag.setAttribute('src', data.message)
+        dogDiv.appendChild(dogImageTag);
+      });
+
+      console.log("im after the promise");
 
     // const dogDiv = document.getElementById('dog-image-div');
 
