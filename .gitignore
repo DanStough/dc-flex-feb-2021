@@ -109,4 +109,9 @@ dist
 
 # TernJS port file
 .tern-port
+<<<<<<< HEAD
+>>>>>>> main
+=======
+
+FUTURE/
 >>>>>>> main
