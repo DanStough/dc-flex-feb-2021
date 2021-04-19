@@ -4,22 +4,27 @@ generateDogBtn.addEventListener('click', ()=>{
 
     console.log("get a dog picture please")
 
-    // REPLACE ME AND LOG PROMISE
-    // const request = new XMLHttpRequest();
-    // request.open('GET', 'https://dog.ceo/api/breeds/image/random', false);  // `false` makes the request synchronous
-    // request.send(null);
-
-    // if (request.status === 200) {
-    //     console.log(request.responseText);
-    // }
-    // const data= JSON.parse(request.responseText)
-
-    // const dogDiv = document.getElementById('dog-image-div');
-
-    // const dogImageTag = document.createElement('img')
-    // dogImageTag.setAttribute('src', data.message)
-    // dogDiv.appendChild(dogImageTag);
-
+    fetch("https://dog.ceo/api/breeds/image/random")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+    
+            // console.log(res.data.myLittle.pony) // This will throw an error
+            const dogDiv = document.getElementById('dog-image-div');
+    
+            // // This is adding an element
+            // const dogImageTag = document.createElement('img')
+            // dogImageTag.setAttribute('src', data.message)
+            // dogDiv.appendChild(dogImageTag);
+    
+            // This is replacing an element
+            dogDiv.innerHTML= `<img src="${data.message}" />`;
+        })
+        .catch( err => {
+            // Gracefully Display an error here
+            const dogDiv = document.getElementById('dog-image-div');
+            dogDiv.innerHTML= `<h1>Woops</h1>`;
+        });
 })
 
 var checkoutBtn = document.getElementById('checkout-btn');
