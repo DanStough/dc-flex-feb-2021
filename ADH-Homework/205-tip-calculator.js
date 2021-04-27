@@ -10,8 +10,6 @@
 // tipAmount(100, 'good') --> 20
 // tipAmount(40, 'fair') --> 6
 
-
-
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "totalAmount" that takes the same arguments as "tipAmount"
 // except it returns the total as the tip amount plus the bill amount.
@@ -20,8 +18,6 @@
 // Examples:
 // totalAmount(100, 'good') --> 120
 // totalAmount(40, 'fair') --> 46
-
-
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "splitAmount" that takes a bill amount, the level of service,
@@ -32,21 +28,18 @@
 // splitAmount(100, 'good', 5) --> 24
 // splitAmount(40, 'fair', 2) --> 23
 
-function tipAmount( good, fair, poor ) {
-   let good = (20/100);
-   let fair = (15/100);
-   let poor = (10/100);
-        return (good)*100;
+function tipAmount(good, fair, poor) {
+  let good = 20 / 100;
+  let fair = 15 / 100;
+  let poor = 10 / 100;
+  return tipAmount(good, fair, poor) * 100;
 }
 
-console.log(tipAmount(100, 'good'))
-
-function totalAmount( good, fair, poor ) {
-    good = (20/100);
-    fair = (15/100);
-    poor = (10/100);
-        return (good)*100 + good
-        ;
+function totalAmount(go, fa, po) {
+  let go = 20 / 100;
+  let fa = 15 / 100;
+  let po = 10 / 100;
+  return totalAmount(go, fa, po);
 }
 
-console.log(totalAmount(100, 'good'))
+console.log(tipAmount(100, "go", 5));
