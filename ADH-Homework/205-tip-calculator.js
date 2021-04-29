@@ -28,18 +28,16 @@
 // splitAmount(100, 'good', 5) --> 24
 // splitAmount(40, 'fair', 2) --> 23
 
-function tipAmount(good, fair, poor) {
-  let good = 20 / 100;
-  let fair = 15 / 100;
-  let poor = 10 / 100;
-  return tipAmount(good, fair, poor) * 100;
+function tipAmount() {
+  good = 100 / 20;
+  return tipAmount(good);
 }
 
-function totalAmount(go, fa, po) {
-  let go = 20 / 100;
-  let fa = 15 / 100;
-  let po = 10 / 100;
-  return totalAmount(go, fa, po);
-}
+// function totalAmount(go, fa, po) {
+//   let go = 20 / 100;
+//   let fa = 15 / 100;
+//   let po = 10 / 100;
+//   return totalAmount(go, fa, po);
+// }
 
-console.log(tipAmount(100, "go", 5));
+console.log(tipAmount(good));
