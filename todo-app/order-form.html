@@ -9,11 +9,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heggy Online Order Form</title>
+  <title>Heggy donut ordering</title>
   <script src="./index.js"></script>
 </head>
 <body>
-  <h1>Heggy Online Order Form</h1>
+  <h1>donut ordering social!</h1>
   <div id="cat">
     <img src="https://placekitten.com/200/200" alt="cat" id="img">
   </div>
@@ -22,65 +22,7 @@
   <!-- my donuts get inserted here!! -->
     </div>
   <form onsubmit="event.preventDefault();">
-    <fieldset>
-      <legend>Delivery Address</legend>
-      <label for="name">Name</label>
-      <input type="text" name="name">
-
-      <label for="street">Street</label>
-      <input type="text" name="street">
-
-      <label for="city">City</label>
-      <input type="text" name="city">
-
-      <label for="state">State</label>
-      <!-- dropdown -->
-      <select name="state">
-        <option value="" disabled selected>--Please choose an option--</option>
-        <option value="ga">Georgia</option>
-        <option value="fl">Florida</option>
-        <option value="tx">Texas</option>
-      </select>
-
-      <label for="zip">Zip Code</label>
-      <input type="text" name="zip">
-    </fieldset>
-
-    <fieldset>
-      <!-- legend section things off -->
-      <legend>Your Custom Donut</legend>
-      <h2>Type</h2>
-      <!-- label: https://learn.digitalcrafts.com/flex/lessons/front-end-foundations/html-forms/#form-accessibility <label> for="standard", <input> id="standard" match and create association -->
-      <label for="standard"> 
-        <input type="radio" id="standard" name="donut-type" value="standard"> Donut with Hole
-      </label>
-      <label for="filled">
-        <input type="radio" id="filled" name="donut-type" value="filled" checked> Filled Donut
-      </label>
-      <label for="holes">
-        <input type="radio" id="holes" name="donut-type" value="holes"> Donut Holes
-      </label>
-
-      <h2>Toppings</h2>
-      <div>
-        <label for="choco-icing">
-          <input type="checkbox" name="choco-icing" value="choco-icing"> Chocolate Icing
-        </label>
-        <label for="sprinkles">
-          <input type="checkbox" name="sprinkles" value="sprinkles"> Sprinkles
-        </label>
-        <label for="powdered-sugar">
-          <input type="checkbox" name="powdered-sugar" value="powdered-sugar"> Powdered Sugar
-        </label>
-      </div>
-
-      <h2><label for="customizations">Custom Instructions</label></h2>
-      <div>
-        <textarea name="customizations" id="" cols="30" rows="10">
-          Customize your donut...
-        </textarea>
-      </div>
-    </fieldset>
+    <input type="submit">
   </form>
   
 </body>

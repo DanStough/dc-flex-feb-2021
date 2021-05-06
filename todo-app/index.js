@@ -1,32 +1,7 @@
 // Runs when browser see the script tag
 console.log("1. I'm Here")
 
-const donuts = [
-  {
-    name: "The Carol Baskin",
-    description: "lovely donls gaihl adkjalif. lsijfodia djlsi",
-    topping: "Vanilla Icing w/ tiger stripes",
-    filling: "strawberry",
-    filled: true,
-    variety: "Yeast"
-  },
-  {
-    name: "The (Tiger) King",
-    description: "lovely donls gaihl adkjalif. lsijfodia djlsi",
-    topping: "Choco Icing w/ tiger stripes",
-    filling: "strawberry",
-    filled: true,
-    variety: "Yeast"
-  },
-  {
-    name: "Please Save the Tigers",
-    description: "lovely donls gaihl adkjalif. lsijfodia djlsi",
-    topping: "Sprinkles Icing w/ tiger stripes",
-    filling: "strawberry",
-    filled: true,
-    variety: "Yeast"
-  },
-];
+const donuts = [];
 
 const renderDonuts = () => {
   // console.log("3. I'm inside the render function");
