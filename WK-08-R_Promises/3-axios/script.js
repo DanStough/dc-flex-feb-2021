@@ -1,24 +1,22 @@
 const generateDogBtn = document.getElementById('generate-dog-btn');
 
+// console.log(axios);
+
 generateDogBtn.addEventListener('click', ()=>{
 
-    console.log("get a dog picture please")
-
-    // REPLACE ME AND LOG PROMISE
-    // const request = new XMLHttpRequest();
-    // request.open('GET', 'https://dog.ceo/api/breeds/image/random', false);  // `false` makes the request synchronous
-    // request.send(null);
-
-    // if (request.status === 200) {
-    //     console.log(request.responseText);
-    // }
-    // const data= JSON.parse(request.responseText)
-
     // const dogDiv = document.getElementById('dog-image-div');
+    // dogDiv.innerHTML = `<h3>LOADING....</h3>`;
+    console.log("get a dog picture please");
 
-    // const dogImageTag = document.createElement('img')
-    // dogImageTag.setAttribute('src', data.message)
-    // dogDiv.appendChild(dogImageTag);
+    axios.get('https://dog.ceo/api/breeds/image/random')
+    .then(res => {
+        console.log("response.data", res.data);
+        console.log("response.data.message", res.data.message);
+        const dogDiv = document.getElementById('dog-image-div');
+
+        dogDiv.innerHTML = `<img src="${res.data.message}">`;
+    })
+    .catch( err => console.error(err) );
 
 })
 
