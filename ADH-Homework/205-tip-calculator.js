@@ -32,6 +32,8 @@ let good = 20 / 100;
 let fair = 15 / 100;
 let poor = 10 / 100;
 
-function tipAmount(num1) {
-  num1 * good;
+function tipAmount(num) {
+  num = good * 100;
+  return console.log(num);
 }
+tipAmount();
