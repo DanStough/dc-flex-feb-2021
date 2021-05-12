@@ -1,0 +1,28 @@
+.conatiner {
+    border: 2px solid crimson;
+    display: flex;
+    /* flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    /* starts at item 1 */
+    /* justify-content: flex-end;
+    starts from end to begining */
+}
+.conatiner__item {
+    width: 200px;
+    margin: 10px;
+    border: 2px solid crimson;
+    background-color: greenyellow;
+}
+.conatiner__item-1 {
+    min-height: 300px;
+    order: 3
+}
+.conatiner__item-2 {
+    min-height: 100px;
+    order: 1;
+  }
+.conatiner__item-3 {
+    min-height: 200px;
+    order: 2;
+  }

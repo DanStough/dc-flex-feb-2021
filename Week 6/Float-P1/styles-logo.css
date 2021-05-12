@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo-container{
+    border: 1px solid blue;
+    width: 160px;
+}
+
+.navs{
+border: 1px solid green;
+}

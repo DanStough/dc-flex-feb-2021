@@ -1,0 +1,129 @@
+<!-- Create a website layout, similar to the example in the lesson, using floats. There should be the following
+
+A header with a title and floating navigation
+A main content area (75% width) and a floating sidebar (25% width)
+A footer (clear of both the content and sidebar) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=`" />
+    <title>Layout Solution</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .layout {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .layout-header {
+        overflow: auto;
+        margin-bottom: 20px;
+      }
+
+      .layout-sidebar {
+        float: right;
+        padding: 10px;
+        width: 25%;
+      }
+
+      .layout-main {
+        width: 75%;
+      }
+
+      .header-menu {
+        float: right;
+        list-style-type: none;
+      }
+
+      .header-menu-item {
+        float: left;
+        padding-right: 10px;
+      }
+
+      .header-title {
+        margin: 0;
+      }
+
+      .sidebar-title {
+        margin: 0;
+      }
+
+      .main-title {
+        margin: 0;
+      }
+
+      .layout-footer {
+        clear: both;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <header class="layout-header">
+        <ul class="header-menu">
+          <li class="header-menu-item"><a href="#">Home</a></li>
+          <li class="header-menu-item"><a href="#">Blog</a></li>
+          <li class="header-menu-item"><a href="#">About</a></li>
+          <li class="header-menu-item"><a href="#">Contact</a></li>
+        </ul>
+        <h1 class="header-title">Acme Inc</h1>
+      </header>
+
+      <aside class="layout-sidebar">
+        <h3 class="sidebar-title">Categories</h3>
+        <ul>
+          <li><a href="#">Finance</a></li>
+          <li><a href="#">Hiring</a></li>
+          <li><a href="#">Marketing</a></li>
+          <li><a href="#">Sales</a></li>
+          <li><a href="#">Culture</a></li>
+        </ul>
+      </aside>
+      <main class="layout-main">
+        <h2 class="main-title">Headline</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
+          asperiores ullam eligendi id, explicabo libero eos iste sunt aliquam
+          alias voluptatum numquam natus quibusdam minima eveniet molestiae
+          illum! Ratione
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
+          reprehenderit dicta molestiae obcaecati iste qui consequuntur
+          provident voluptas corporis ad nesciunt modi mollitia, minima a
+          consectetur reiciendis similique autem, consequatur laboriosam
+          deserunt. Iste cupiditate quod aliquid, odit, eligendi excepturi
+          accusamus sint incidunt sunt laborum molestias distinctio dolores
+          fugit obcaecati minus facere fugiat, enim tenetur iure quisquam
+          aliquam perspiciatis! Recusandae aperiam blanditiis reiciendis nisi
+          cupiditate quam quo aliquid sapiente sint ut nihil, et illum! Modi
+          cupiditate quam optio, accusamus distinctio laudantium et atque sit
+          saepe officiis, at iusto ipsam iure repudiandae ex, consequuntur
+          tenetur dolor? Voluptate, sunt. Et, vel voluptatibus mollitia eum
+          beatae corporis natus, modi veritatis hic reprehenderit ad porro a
+          fugiat, in laudantium provident officia nihil animi autem blanditiis
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptas molestias obcaecati quas ratione cum perspiciatis fuga eaque
+          necessitatibus, aperiam repudiandae rerum quam! Officiis, quos. Sunt
+          quo tempore eum ducimus ex vitae saepe, veritatis odit voluptatum ad
+          repellendus atque tempora quis suscipit exercitationem officia,
+          debitis at maiores est quasi iste aspernatur sit maxime. Architecto
+          saepe quasi iure ea alias eum veritatis obcaecati. Deserunt sequi
+          nulla ab quam, assumenda odit odio nemo, culpa sed dolores, distinctio
+          earum consequatur inventore. Eveniet, iusto?
+        </p>
+      </main>
+      <footer class="layout-footer">
+        Acme Inc. All rights reserved.
+      </footer>
+    </div>
+  </body>
+</html>

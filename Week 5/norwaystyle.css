@@ -1,60 +1,45 @@
-* .header {
-  overflow: auto;
-  box-sizing: border-box;
+*
+.background {
+  margin: 0 auto;
+  width: 250px;
 }
-.header-menu ul{
-  float: right;
-  width: 75%;
+  .box lightblue{
+    float: left;
+    padding: 40px 0;
+    text-align: center;
+    width: 100px;
+    top: -600px; left: 200px;
+  }
+.lightblue {
+  background-color: rgb(230, 232, 250);
 }
-.header-menu {
-  float: left;
-  position: absolute top 10px;
-  width: 100%;
-}
-ul{
-  list-style-type: none;
-}
-
-li{
-  display:inline-block;
-}
-
-.top-img-contain{
-  width: 10%;
-  float: right;
-}
-.image-container{
+.header img{
+  border: 2px solid crimson;
+  margin: right;
   border-radius: 100%;
   overflow: hidden;
   width: 40px;
   height: 40px;
-  }
-img{
-    width: 140%;
-    margin-left: -10px;
-}
-.box1 {
-  float: top;
-  padding: 10px 0;
-  width: 100px;
-
- {
-  font-family: Lato;
   position: relative;
+  top: -600px; left: 200px;
+  }
+.header p {
+  vertical-align: center;
+  margin: 0;
+  top: -600px;               /* 3 */
+  transform: translate(0, 50%) }   /* 4 */
 }
 
-.background {
-  margin: 0 auto;
-  width: 300px;
-}
 
-.text-container {
+/* .text-container {
   color: white;
   left: 0;
   position: absolute;
   text-align: center;
   top: 40%;
   width: 100%;
+  font-family: Lato;
+  position: relative;
 }
 .text-container h1 {
   font-size: 16;
@@ -65,4 +50,4 @@ img{
   text-align: center;
 }
 
-
+ */

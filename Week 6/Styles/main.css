@@ -1,0 +1,16 @@
+main {
+  flex: 1;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  margin-top: 22px;
+}
+
+.image-container {
+  margin-bottom: 3px;
+  margin-top: 3px;
+}

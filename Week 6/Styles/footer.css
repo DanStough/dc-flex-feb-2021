@@ -1,0 +1,23 @@
+address{
+    font-style: normal;
+    margin-bottom: 16px;
+}
+
+address span{
+    margin 0 6px;
+}
+
+body{
+    font-family: sans-serif;
+   
+}
+footer{
+    background-color: #3a527a;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    text-align: center;
+
+}
+icons-container i{
+    margin: 0 8px;
+}

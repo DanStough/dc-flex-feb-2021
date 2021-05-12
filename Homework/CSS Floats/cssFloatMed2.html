@@ -1,0 +1,70 @@
+<!-- #Gallery
+Create a gallery of images that float side-by-side of each other. The images should be different widths. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery Solution</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 10px;
+        background-color: #eee;
+      }
+
+      .gallery {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .gallery-item {
+        border: 5px solid white;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <img
+        src="https://picsum.photos/200/200"
+        alt="placeholder"
+        class="gallery-item"
+      />
+      <img
+        src="https://picsum.photos/400/200"
+        alt="placeholder"
+        class="gallery-item"
+      />
+      <img
+        src="https://picsum.photos/110/200"
+        alt="placeholder"
+        class="gallery-item"
+      />
+      <img
+        src="https://picsum.photos/420/200"
+        alt="placeholder"
+        class="gallery-item"
+      />
+      <img
+        src="https://picsum.photos/320/200"
+        alt="placeholder"
+        class="gallery-item"
+      />
+      <img
+        src="https://picsum.photos/200/300"
+        alt="placeholder"
+        class="gallery-item"
+      />
+      <img
+        src="https://picsum.photos/540/300"
+        alt="placeholder"
+        class="gallery-item"
+      />
+    </div>
+  </body>
+</html>

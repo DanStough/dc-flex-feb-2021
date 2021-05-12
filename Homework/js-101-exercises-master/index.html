@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>JavaScript 101</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="./logo.png" alt="DigitalCrafts Logo" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h1>Javascript 101 Exercises</h1>
+          <p>
+            The exercises below are designed to get you comfortable writing
+            basic JavaScript. They’re organized into seven levels. Each level
+            corresponds to a <code>.js</code> file in the
+            <code>./exercises</code> directory. Write your solutions to each
+            exercise inside their corresponding functions.
+            <strong>Press the "Run" button</strong> for each exercise to see if
+            you got the right answer!
+          </p>
+          <div class="alert alert-warning">
+            <strong>Reload this page</strong> before click "Run" to make sure
+            you have the latest code loaded
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="card mb-5">
+            <div class="card-header">
+              <ul
+                class="nav nav-tabs card-header-tabs"
+                id="myTab"
+                role="tablist"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    id="level-1-tab"
+                    data-toggle="tab"
+                    href="#lvl1"
+                    role="tab"
+                    aria-controls="level-1"
+                    aria-expanded="true"
+                    >Level 1</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="level-2-tab"
+                    data-toggle="tab"
+                    href="#lvl2"
+                    role="tab"
+                    aria-controls="level-2"
+                    >Level 2</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="level-3-tab"
+                    data-toggle="tab"
+                    href="#lvl3"
+                    role="tab"
+                    aria-controls="level-3"
+                    >Level 3</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="level-4-tab"
+                    data-toggle="tab"
+                    href="#lvl4"
+                    role="tab"
+                    aria-controls="level-4"
+                    >Level 4</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="level-5-tab"
+                    data-toggle="tab"
+                    href="#lvl5"
+                    role="tab"
+                    aria-controls="level-5"
+                    >Level 5</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="level-6-tab"
+                    data-toggle="tab"
+                    href="#lvl6"
+                    role="tab"
+                    aria-controls="level-6"
+                    >Level 6</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="level-7-tab"
+                    data-toggle="tab"
+                    href="#lvl7"
+                    role="tab"
+                    aria-controls="level-7"
+                    >Level 7</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="card-body">
+              <div class="tab-content" id="myTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="lvl1"
+                  role="tabpanel"
+                  aria-labelledby="level-1-tab"
+                >
+                  <!-- Level 1 -->
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3 class="card-title">Declaring Variables</h3>
+                      <p class="card-text">
+                        Declare a variable and return it
+                      </p>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testDeclare"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Numbers</h3>
+                      <div>Declare and instantiate a number and return it</div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testDeclareNumber"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Floats</h3>
+                      <div>
+                        Declare and instantiate a floating point number and
+                        return it
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testDeclareFloat"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Strings</h3>
+                      <div>
+                        Declare and instantiate a string "Hello World!" and
+                        return it
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testDeclareString"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Arrays</h3>
+                      <div>
+                        Declare and instantiate an array containing the string
+                        "Hello World!" and the number 4 and return it
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testDeclareArray"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Objects</h3>
+                      <div>
+                        Declare and instantiate an object containing the
+                        key-value pairs key1->"Hello World!" and key2->4, and
+                        return it
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testDeclareObject"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Booleans</h3>
+                      <div>
+                        Declare and instantiate a boolean value 'false' and
+                        return it
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testDeclareBoolean"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="tab-pane fade"
+                  id="lvl2"
+                  role="tabpanel"
+                  aria-labelledby="level-2-tab"
+                >
+                  <!-- Level 2 -->
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Addition</h3>
+                      <div>Implement number addition</div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testAdd"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Subtraction</h3>
+                      <div>Implement number subtraction</div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testSubtract"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Multiplication</h3>
+                      <div>Implement number addition</div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testMultiply"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Division</h3>
+                      <div>Implement number division</div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testDivide"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Assignment Operators</h3>
+                      <div>
+                        Implement an addition/assignment combo operator
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testAssign"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Level 3 -->
+                <div
+                  class="tab-pane fade"
+                  id="lvl3"
+                  role="tabpanel"
+                  aria-labelledby="level-3-tab"
+                >
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>String Concatenation 1</h3>
+                      <div>
+                        Concatenate two strings and return the result
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testConcatenation1"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>String Concatenation 2</h3>
+                      <div>
+                        Concatenate a string and a number and return the result
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testConcatenation2"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Convert number to string</h3>
+                      <div>
+                        Use concatenation to turn the number 12 into a string
+                        and return it
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testConvert"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>String Length</h3>
+                      <div>Return the length of a string</div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testStringLength"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Substring index</h3>
+                      <div>
+                        Find the index of a substring in a string
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testStringIndex"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Level 4 -->
+                <div
+                  class="tab-pane fade"
+                  id="lvl4"
+                  role="tabpanel"
+                  aria-labelledby="level-4-tab"
+                >
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>True</h3>
+                      <div>
+                        Return the boolean value "true"
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testTrue"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>False</h3>
+                      <div>
+                        Return the boolean value "false"
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testFalse"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Not</h3>
+                      <div>
+                        Return the opposite of the input boolean value
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testNot"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>And</h3>
+                      <div>
+                        Return the logical "and" of the input boolean values
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testAnd"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Or</h3>
+                      <div>
+                        Return the logical "or" of the input boolean values
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testOr"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Equivalence</h3>
+                      <div>
+                        Return the logical "equivalence" of the input boolean
+                        values
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testEquivalence"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Level 5 -->
+                <div
+                  class="tab-pane fade"
+                  id="lvl5"
+                  role="tabpanel"
+                  aria-labelledby="level-5-tab"
+                >
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Array push</h3>
+                      <div>Add an element to an array</div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testArrayPush"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Array pop</h3>
+                      <div>
+                        Remove an element from an array
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testArrayPop"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Array length</h3>
+                      <div>Return the length of an array</div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testArrayLength"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Array index</h3>
+                      <div>
+                        Return the index of an item in an array
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testArrayIndex"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Level 6 -->
+                <div
+                  class="tab-pane fade"
+                  id="lvl6"
+                  role="tabpanel"
+                  aria-labelledby="level-6-tab"
+                >
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>If, Else If, Else</h3>
+                      <div>
+                        Return "hello", "world", or "bye" based on the input
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testConditional"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>For loop</h3>
+                      <div>
+                        Return an array containing 10 "hello" strings
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testFor"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                  <hr />
+
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>While loop</h3>
+                      <div>
+                        Empty the array with a while loop
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testWhile"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Level 7 -->
+                <div
+                  class="tab-pane fade"
+                  id="lvl7"
+                  role="tabpanel"
+                  aria-labelledby="level-7-tab"
+                >
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h3>Function</h3>
+                      <div>
+                        Write a function that returns an array
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <button
+                        id="testFunction"
+                        onclick="evalExercise(this)"
+                        class="btn btn-primary float-right"
+                        type="button"
+                      >
+                        Run
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Page JavaScript -->
+    <script src="index.js"></script>
+
+    <!-- Exercises JavaScript -->
+    <script src="exercises/level1.js"></script>
+    <script src="exercises/level2.js"></script>
+    <script src="exercises/level3.js"></script>
+    <script src="exercises/level4.js"></script>
+    <script src="exercises/level5.js"></script>
+    <script src="exercises/level6.js"></script>
+    <script src="exercises/level7.js"></script>
+  </body>
+</html>

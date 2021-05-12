@@ -1,0 +1,24 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+.y-wrap {
+margin: 0 auto;
+width: 90%;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  margin-top: 22px;
+}
+
+.image-container {
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+

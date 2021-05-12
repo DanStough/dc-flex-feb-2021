@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Solution</title>
+    <style>
+      .grid {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .grid-item {
+        float: left;
+        width: 200px;
+        height: 200px;
+      }
+
+      .grid-item:nth-child(odd) {
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+    </div>
+  </body>
+</html>
+
+<!-- Grid
+Create a 9x9 grid using floats. Put all 9 elements in the same container and set a width on the container and elements to create the desired grid size of 9x9. -->
