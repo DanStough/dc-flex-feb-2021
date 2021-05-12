@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book App</title>
+</head>
+<body>
+    <h1>${title}</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis non nulla suscipit condimentum. Phasellus sit amet molestie lorem. Aliquam erat volutpat. Vestibulum et nibh vehicula, sollicitudin erat non, imperdiet sem. Aenean bibendum nibh ac iaculis commodo. Etiam suscipit id sapien quis elementum. Suspendisse potenti. Phasellus et magna non ex consectetur hendrerit sit amet vel dolor. Vestibulum quis erat facilisis, porta elit et, sodales felis. Suspendisse suscipit purus in vestibulum sollicitudin. Nunc ut fringilla purus, non mattis mi. Sed venenatis augue quis ante volutpat tempor. Nulla a finibus enim. Ut condimentum orci ipsum, at pulvinar nibh accumsan et.</p>
+    <ul>
+      ${donuts.map(donut => `
+        <li><a href="./donuts/${donut.id}">${donut.name}</a></li>
+      `).join('')}
+    </ul>
+</body>
+</html>
