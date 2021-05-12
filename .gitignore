@@ -39,6 +39,9 @@ build/Release
 
 # Dependency directories
 node_modules/
+
+# ignore .ds_store file
+.DS_Store
 jspm_packages/
 
 # TypeScript v1 declaration files
@@ -103,6 +106,7 @@ dist
 # TernJS port file
 .tern-port
 
+<<<<<<< HEAD
 # Compiled source #
 ###################
 *.com
@@ -140,3 +144,6 @@ ehthumbs.db
 Thumbs.db
 .DS_Store
 .DS_Store?
+=======
+FUTURE/
+>>>>>>> main
