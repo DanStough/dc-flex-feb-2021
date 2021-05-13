@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>My server side rendered site</title>
+        <style>
+            p {
+                color: blue
+            }
+        </style>
+        <!-- <link rel="stylesheet" href="./style.css" /> -->
+    </head>
+    <body>
+        <h1>${title}</h1>
+        <p>Bacon ipsum dolor amet flank swine sausage short ribs shankle ham. Fatback tail shoulder ground round jowl cupim chicken sirloin pastrami alcatra meatball chislic pancetta kielbasa prosciutto. Chislic frankfurter t-bone pork belly buffalo swine fatback. Prosciutto cupim pork belly porchetta ribeye, chislic rump shankle tail tenderloin bresaola sirloin. Hamburger sausage pork, fatback ham hock swine jowl pig tri-tip jerky buffalo drumstick t-bone chicken pastrami. Bacon cow tail, burgdoggen pork loin alcatra pork belly jowl bresaola chicken chislic venison.</p>
+        <h2>Donuts</h2>
+        <ul>
+            ${ donuts.map( donut => `
+                <li><a href="./donuts/${donut.id}">${donut.name}</a></li>
+                ` ).join('')}
+        </ul>
+    </body>
+</html>
