@@ -2,9 +2,9 @@
 const express = require("express");
 const es6Renderer = require('express-es6-template-engine');
 
-// 1. Add express middlewares for static files and body parsing
-
 const app = express();
+
+// 1. Add express middlewares for static files and body parsing
 
 // Configure Template Engine
 app.engine('html', es6Renderer);
@@ -38,10 +38,6 @@ app.get("/", (req, res)=>{
             profileArray
         }
     })
-})
-
-app.get("*", (req, res)=>{
-    res.send("catch all")
 })
 
 app.listen(3000, ()=>{
