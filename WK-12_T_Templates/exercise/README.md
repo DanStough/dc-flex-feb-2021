@@ -3,7 +3,7 @@
 Your job is to make an address book for your favorite Instagram accounts.
 
 1. A detailed view page for each account.
-1. A list of all the accounts you follow.
+1. A list of all the accounts you follow. (Just avatar, name and link to detail profile)
 
 Use our examples of server-side rendering with templates and route params to achieve the above results. You can use the data in the dataArray module as your mock database.
 
