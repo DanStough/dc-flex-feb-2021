@@ -16,7 +16,6 @@ console.log(process.env.SUPER_SECRET_API_KEY)
 const name = "dans"
 
 app.get("/home", (req, res)=>{
-
     // If you want to get data...
     // FETCH from external api
     // OR, need data from database here
