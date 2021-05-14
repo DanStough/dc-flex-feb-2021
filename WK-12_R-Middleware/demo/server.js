@@ -1,9 +1,14 @@
 const express = require("express");
+const cors = require('cors')
 const es6Renderer = require('express-es6-template-engine');
 const donuts = require("./donuts")
 // console.log(donuts)
 
+
 const app = express();
+
+app.use(cors())
+app.use(express.static('public'))
 
 // Configure Template Engine
 app.engine('html', es6Renderer);
@@ -16,6 +21,7 @@ console.log(process.env.SUPER_SECRET_API_KEY)
 const name = "dans"
 
 app.get("/home", (req, res)=>{
+
     // If you want to get data...
     // FETCH from external api
     // OR, need data from database here
