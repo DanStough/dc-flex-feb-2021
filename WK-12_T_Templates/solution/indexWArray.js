@@ -10,33 +10,33 @@ app.engine('html', es6Renderer);
 app.set('views', 'templates');
 app.set('view engine', 'html');
 
-const data = require('./dataObject')
+const data = require('./dataArray')
 // console.log(data)
 
-// 4. Detail page here. 
+//4. Detail page here. 
 app.get("/profile/:id", (req, res) => {
-    const profile = data[req.params.id]
+    const id = req.params.id
 
-    if(!profile){
-        res.status(404).send("profile id not found")
+    const friend = data.find(item => item.id === id)
+    console.log(friend)
+    
+    if(!friend){
+        console.log("not found")
+        res.status(404).render("404")
     }
 
     res.render("profile", {
         locals: {
-            profile
+            profile: friend
         }
     })
 })
 
 // 5. List page here
 app.get("/", (req, res)=>{
-    const profileIds = Object.keys(data)
-    const profileArray = profileIds.map( id => data[id])
-    console.log(profileArray)
-
-    res.render('index', {
+    res.render("index", {
         locals: {
-            profileArray
+            profileArray: data
         }
     })
 })
