@@ -12,6 +12,7 @@
     "nodemon": "^2.0.7"
   },
   "scripts": {
+    "start": "nodemon node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon node server.js"
   },
