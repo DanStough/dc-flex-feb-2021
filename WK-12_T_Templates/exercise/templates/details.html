@@ -4,17 +4,57 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <style>
+      .content {
+          width: 400px;
+          margin: auto;
+      }
+
+      .profile {
+          display: flex;
+          align-items: center;
+      }
+
+      .profile-name {
+          vertical-align: middle;
+          flex-grow: 1;
+          text-align: center;
+      }
+
+      .text-center {
+          text-align: center;
+      }
+
+      .avatar {
+          border-radius: 50%;
+      }
+
+      .photo-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+      }
+
+      .post {
+          width: 100px;
+      }
+  </style>
   <title>Detail Page</title>
 </head>
 <body>
-  <img src="${detail.avatar}" />
-  <h1>${detail.name}</h1>
-  <h2>${detail.email}</h2>
-  <ul>
-    ${detail.images.map( (image, index) => `
-    <li><img src="${image}"></li>
+  <div class="profile">
+    <img src="${detail.avatar}" class="avatar" />
+    <h1 class="profile-name">${detail.name}</h1>
+  </div>
+  <br />
+  <h3 class="text-center">Email: <a href="mailto:${detail.email}">${detail.email}</a></h2>
+  <hr />
+  <div class="photo-container">
+      ${detail.images.map( (image, index) => `
+      <img class ="post" src="${image}">
       ` ).join('')}
-  </ul>
+  </div>
   <!-- <p>${detail.images}</p> -->
 </body>
 </html>

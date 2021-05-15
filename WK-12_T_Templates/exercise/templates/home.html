@@ -4,15 +4,47 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <style>
+      .content {
+          width: 400px;
+          margin: auto;
+      }
+
+      .profile {
+          display: flex;
+          align-items: center;
+      }
+
+      .profile-name {
+          vertical-align: middle;
+          flex-grow: 1;
+          text-align: center;
+      }
+
+      .header {
+          text-align: center;
+      }
+
+      .avatar {
+          border-radius: 50%;
+      }
+  </style>
+  <title>FaceGram</title>
 </head>
 <body>
   <h1>${title}</h1>
-  <h2>People I follow</h2>
-    <ul>
-      ${people.map( (detail, index) => `
-      <li><img src="${detail.avatar}"><a href="./details/${index}">${detail.name}</a></li>
+  <div class="content"></div>
+    <h2 class="header">People I follow</h2>
+      <div>
+        ${people.map( (detail, index) => `
+          <div class="profile">
+            <img src="${detail.avatar}" class="avatar" />
+            <h2 class="profile-name"><a href="./details/${index}">${detail.name}</a></h2>
+          </div>
+          <br />
         ` ).join('')}
-    </ul>
+      </div>
+  </div>
 </body>
 </html>
