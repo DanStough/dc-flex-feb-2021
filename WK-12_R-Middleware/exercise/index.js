@@ -3,9 +3,9 @@ const es6Renderer = require("express-es6-template-engine");
 
 const app = express();
 
-app.use(express.static("public", options));
-
 // 1. Add express middlewares for static files and body parsing
+
+app.use(express.static("public"));
 
 // Configure Template Engine
 app.engine("html", es6Renderer);
