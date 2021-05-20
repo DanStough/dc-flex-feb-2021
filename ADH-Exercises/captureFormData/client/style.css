@@ -1,0 +1,17 @@
+* {
+  font-family: sans-serif;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px;
+}
+fieldset {
+  margin-bottom: 20px;
+}
+
+.field-and-label {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+}
