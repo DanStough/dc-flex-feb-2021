@@ -1,9 +1,14 @@
 const express = require("express");
+const cors = require('cors')
 const es6Renderer = require('express-es6-template-engine');
 const donuts = require("./donuts")
 // console.log(donuts)
 
+
 const app = express();
+
+app.use(cors())
+app.use(express.static('public'))
 
 // Configure Template Engine
 app.engine('html', es6Renderer);
