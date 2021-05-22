@@ -17,12 +17,12 @@ app.use(session({
 app.get('/', (req, res) => {
     console.log(req.session)
     console.log("Hello world")
-    res.send(`<h1>Hello world from server</h1>
-    <h2>Session</h2>
+    res.send(`<h1>Hello world</h1>
+    <h2>Session (on Server)</h2>
     <pre>${JSON.stringify(req.session, null, '\t')}</pre>
-    <h2>Unsigned Cookies</h2>
+    <h2>Unsigned Cookies (from browser)</h2>
     <pre>${JSON.stringify(req.cookies, null, '\t')}</pre>
-    <h2>Signed Cookies</h2>
+    <h2>Signed Cookies (from browser)</h2>
     <pre>${JSON.stringify(req.signedCookies, null, '\t')}</pre>`)
 })
 
