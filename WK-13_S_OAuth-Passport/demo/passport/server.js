@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-const express = require("express");
-const session = require("express-session");
-
-const app = express();
-
-app.get("/", (req, res) => {
-  console.log("here");
-  res.send("<h1>Hello There</h1>");
-});
-=======
 require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
@@ -97,4 +86,3 @@ app.get('/ebooks', ensureAuthenticated, (req, res) => {
 app.listen(3001, ()=> {
     console.log("running on port 3001");
 })
->>>>>>> main
