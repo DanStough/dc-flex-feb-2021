@@ -1,0 +1,15 @@
+{
+  "name": "facegram",
+  "version": "1.0.0",
+  "description": "Something like social media",
+  "main": "index.js",
+  "dependencies": {
+    "faker": "^5.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

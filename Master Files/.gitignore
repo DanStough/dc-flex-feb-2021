@@ -39,6 +39,9 @@ build/Release
 
 # Dependency directories
 node_modules/
+
+# ignore .ds_store file
+.DS_Store
 jspm_packages/
 
 # TypeScript v1 declaration files
@@ -102,3 +105,5 @@ dist
 
 # TernJS port file
 .tern-port
+
+FUTURE/
