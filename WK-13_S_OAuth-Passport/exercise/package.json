@@ -1,12 +1,15 @@
 {
-  "name": "facegram",
+  "name": "exercise",
   "version": "1.0.0",
-  "description": "Something like social media",
+  "description": "FaceGram is blowing up. But right now access is ANONYMOUS - no one needs to login to create an account or view content. This is bad for business. Your job is to require a login for the site. Use the following steps to work through this new feature request.",
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-es6-template-engine": "^2.2.3",
     "faker": "^5.5.3",
+    "passport": "^0.4.1",
+    "passport-github": "^1.1.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
@@ -14,8 +17,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon node server.js"
+    "dev": "nodemon index.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC"
 }
