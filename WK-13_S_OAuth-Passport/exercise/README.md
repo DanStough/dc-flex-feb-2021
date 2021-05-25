@@ -17,7 +17,7 @@ The previous solution is included here for you to use as a starting point. You s
         2. login route
         3. callback route
         4. logout route
-3. Make sure you must. If you're not logged in, redirect to the login page.
+3. If you're not logged in, redirect to the login page.
 4. Add a logout button/anchor tag in the other template views.
 
 # Bonus Points!
