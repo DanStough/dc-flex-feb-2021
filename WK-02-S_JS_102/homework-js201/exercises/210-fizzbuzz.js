@@ -9,3 +9,20 @@
 // Examples:
 // fizzbuzz(3) --> '..fizz'
 // fizzbuzz(15) --> '..fizz.buzzfizz..fizzbuzz.fizz..fizzbuzz'
+
+function fizzbuzz (num) {
+  let holdingPot = '';
+  for (let i = 1; i <= num; i++) {
+    // if num is not multiple of 3 or 5 then add a period
+    if (i % 3 === 0 && i % 5 === 0) {
+      holdingPot += 'fizzbuzz';
+    } else if (i % 3 === 0) {
+      holdingPot += 'fizz';
+    } else if (i % 5 === 0) {
+      holdingPot += 'buzz';
+    } else {
+      holdingPot += '.';
+    }
+  }
+  return holdingPot;
+}

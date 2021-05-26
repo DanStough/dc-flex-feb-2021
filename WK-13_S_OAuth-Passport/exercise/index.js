@@ -6,6 +6,9 @@ const { v4: uuidv4 } = require('uuid');
 const app = express();
 
 // 1. Add express middlewares for static files and body parsing
+// __dirname is root of my project, folder /public will be static location, middleware hint is app.use
+app.use(express.static(__dirname + '/public'));
+
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 

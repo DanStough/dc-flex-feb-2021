@@ -1,0 +1,17 @@
+{
+  "name": "read_file",
+  "version": "1.0.0",
+  "description": "Write a program that prompts the user to enter a file name, and reads in the contents of the file, convert the text to all caps, and prints it out.",
+  "main": "read_file.js",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "readline": "^1.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
