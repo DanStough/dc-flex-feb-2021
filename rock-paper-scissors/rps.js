@@ -6,6 +6,21 @@
 // rockPaperScissors('rock', 'scissors') --> 'player 1'
 // rockPaperScissors('rock', 'paper') --> 'player 2'
 // rockPaperScissors('paper', 'paper') --> 'draw'
+const nGames = 3;
+
+var printWelcome = () => {
+  prompt(`Welcome to Rock 🪨 Paper 🖐 Scissors ✌!
+  You will play ${nGames} games against the AI.
+  Rock beats scissors.
+  Scissors beats paper.
+  Paper beats rock
+  ----------------------------------------------
+  What do you play?
+  `);
+}
+printWelcome();
+
+
 function rockPaperScissors (player1Move, player2Move) {
   let winner = getWinner(player1Move, player2Move);
   return winner;
