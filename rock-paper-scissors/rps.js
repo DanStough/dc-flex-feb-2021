@@ -93,10 +93,10 @@ function updateScore(winner, totalScore) {
   if (winner === 'AI') {
     totalScore--;
   }
-  if (winner === 'tie') {
+  if (winner === 'Tie') {
     totalScore += 0;
   }
-  return totalScore
+  return totalScore;
 }
 
 function getHumanMove() {
