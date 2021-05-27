@@ -68,7 +68,7 @@ app.post("/profile", (req, res) => {
   res.status(200).send();
 });
 
-app.get("/profile/:id", (req, res) => {
+app.get("/profile/:id", ensureAuthenticated, (req, res) => {
   const profile = data[req.params.id];
 
   if (!profile) {
@@ -82,7 +82,7 @@ app.get("/profile/:id", (req, res) => {
   });
 });
 
-app.get("/", (req, res) => {
+app.get("/", ensureAuthenticated, (req, res) => {
   const profileIds = Object.keys(data);
   const profileArray = profileIds.map((id) => data[id]);
 
@@ -91,6 +91,13 @@ app.get("/", (req, res) => {
       profileArray,
     },
   });
+});
+
+app.use(express.static("public"));
+
+app.get("/", ensureAuthenticated, (req, res) => {
+  res.render("/");
+  console.log("here");
 });
 
 app.get("/auth/github", passport.authenticate("github"));
@@ -104,24 +111,17 @@ app.get(
   }
 );
 
-app.use(express.static("public"));
-
-app.get("/", (req, res) => {
-  res.render("/");
-  console.log("here");
-});
-
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
   }
-  res.redirect("/");
+  res.redirect("/login.html");
 }
 
-app.get("login", ensureAuthenticated, (req, res) => {
-  res.send(`<h1>My Profile</h1>
-          <button><a href="/auth/github">Login</a></button>`);
-});
+// app.get("login", ensureAuthenticated, (req, res) => {
+//   res.send(`<h1>My Profile</h1>
+//           <button><a href="/auth/github">Login</a></button>`);
+// });
 
 app.listen(3000, () => {
   console.log("running on port 3000");
