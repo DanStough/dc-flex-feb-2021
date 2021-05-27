@@ -1,15 +1,22 @@
-// This helps manage the secret data from github
+
 require('dotenv').config();
-
-// Old News from express
-const express = require('express');
+const express = require("express");
+const es6Renderer = require('express-es6-template-engine');
+const { v4: uuidv4 } = require('uuid');
 const session = require('express-session');
-
-// NEW! Passport import
 const passport = require('passport');
 const GitHubStrategy = require('passport-github').Strategy;
 
 const app = express();
+
+// 1. Add express middlewares for static files and body parsing
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
+// Configure Template Engine
+app.engine('html', es6Renderer);
+app.set('views', 'templates');
+app.set('view engine', 'html');
 
 const sess = {
     secret: 'keyboard cat',
@@ -28,11 +35,8 @@ passport.use(new GitHubStrategy({
   function(accessToken, refreshToken, profile, cb) {
     console.log(JSON.stringify(profile))
 
-    // ASIDE: Access Tokens are super important! Treat them like passwords (never store in plain text)
-    // You can use this to talk to the Github API
     console.log("Access Token: " + accessToken)
 
-    // Tells passport to move on
     cb(null, profile)
   }
 ));
@@ -52,19 +56,16 @@ passport.deserializeUser(function(id, done) {
     done(null, id);
     //This is looking up the User in the database using the information from the session "id"
 });
-// END these next lines make it work with the session middleware
 
-app.get("/", (req, res) => {
-    console.log("here");
+const data = require('./dataObject')
 
-    // Display all the session data saved on the server
-    res.send(`<h1>Hello world</h1>
-    <h2>you're cheap, log in</h2>
-    <a href="/auth/github">Login</a>
-    <pre>${JSON.stringify(req.session, null, '\t')}</pre>`)
-})
+function ensureAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/login.html')
+}
 
-// This it the endpoint you call when you want to log in
 app.get('/auth/github',
   passport.authenticate('github'));
 
@@ -73,7 +74,7 @@ app.get('/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
-    res.redirect('/ebooks');
+    res.redirect('/');
 });
 
 // This is the route you call when you want to log out
@@ -83,24 +84,48 @@ app.get('/logout', (req, res) => {
     res.redirect("/")
 })
 
-// How can we make sure that someone is logged in to see a page?
-// We make our own middleware we can add to our routes.
-function ensureAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) {
-        return next();
+// 4. Add a post method to handle adding a new user
+app.post("/profile", ensureAuthenticated, (req,res) => {
+    console.log(req.body)
+
+    // Create ID
+    const id = uuidv4()
+
+    // Save data in our "DB"
+    req.body.id = id
+    req.body.images = []
+    data[id]=req.body
+
+    res.status(200).send()
+})
+
+app.get("/profile/:id", ensureAuthenticated, (req, res) => {
+    const profile = data[req.params.id]
+
+    if(!profile){
+        res.status(404).send("profile id not found")
     }
-    res.redirect('/')
-}
 
-// This is a secret page that only logged in users can see!
-app.get('/ebooks', ensureAuthenticated, (req, res) => {
-    res.send(`
-    <h1>Hello, ${req.session.passport.user.displayName} </h1>
-    <a href="/logout">Logout</a>
-    <h2>Teila's Super Secret Ebook Top Ten List</h2>`)
-});
+    res.render("profile", {
+        locals: {
+            profile
+        }
+    })
+})
 
-// Old news
-app.listen(3001, ()=> {
-    console.log("running on port 3001");
+app.get("/", ensureAuthenticated, (req, res)=>{
+    const profileIds = Object.keys(data)
+    const profileArray = profileIds.map( id => data[id])
+
+    res.render('index', {
+        locals: {
+            profileArray
+        }
+    })
+})
+
+app.use(express.static('public'));
+
+app.listen(3001, ()=>{
+    console.log("running on port 3001")
 })
