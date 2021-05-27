@@ -9,7 +9,7 @@ Going back in time before we added authentication, we were using fake data to ru
 Don't forget to handle input errors in your express routes, like  what happens if a user doesn't exist butt is requested by the APIi?
 
 Hints for where to start:
-1. Add NPM script commands to create the database per the [Learning Portal DataModeling Page](https://learn.digitalcrafts.com/flex/lessons/databases/data-modeling/)
+1. Add NPM script commands to create/delete the database per the [Learning Portal DataModeling Page](https://learn.digitalcrafts.com/flex/lessons/databases/data-modeling/)
 1. Install `pg-promise`
 1. Test the database connection in you server.js
 1. Try writing a query to handle `/profile`
