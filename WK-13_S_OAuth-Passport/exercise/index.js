@@ -112,10 +112,11 @@ app.get("/home", ensureAuthenticated, (req, res)=>{
 
 app.get("/", (req, res)=>{
 
-    res.send(`
-      <h1 class="text-center">Hello you must log in to access your account<h1>
-      <h1 class="text-center" ><a href="/auth/github">Login</a></h1>
-    `)
+    res.redirect('login.html')
+    // res.send(`
+    //   <h1 class="text-center">Hello you must log in to access your account<h1>
+    //   <h1 class="text-center" ><a href="/auth/github">Login</a></h1>
+    // `)
 })
 
 app.get('/auth/github',
