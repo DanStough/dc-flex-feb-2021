@@ -2,11 +2,11 @@
 
 Going back in time before we added authentication, we were using fake data to run our server. Now is the time to use a real database. Your job is to take the code provided and instead of using fake data, use `pg-promise` to manipulate a real database. Requirements:
 
-1. The signup page creates a new profile.
 1. The `/profile` page displays all users in the db
 1. The `/profile/:id` route displays an individual user from the db
+1. The signup page creates a new profile.
 
-Don't forget to handle input errors in your express routes, like  what happens if a user doesn't exist butt is requested by the APIi?
+Don't forget to handle input errors in your express routes, like  what happens if a user doesn't exist but is requested by the APIi?
 
 Hints for where to start:
 1. Add NPM script commands to create/delete the database per the [Learning Portal DataModeling Page](https://learn.digitalcrafts.com/flex/lessons/databases/data-modeling/)
