@@ -2,7 +2,7 @@
 Implements the game of Rock-Paper-Scissors!
 
 History:
-This classic game dates back to the Han Dinesty, over 2200 years ago.
+This classic game dates back to the Han Dynesty, over 2200 years ago.
 The First International Rock-Paper-Scissors Programming Competition 
 was held in 1999 and was won by a team called "Iocaine Powder"
 
@@ -58,17 +58,21 @@ def main():
 def get_ai_move_win_strategy (last_round_winner, last_round_human_move):
     """
     Best way to win at rock-paper-scissors:
-    - WON: If you win, don't keep playing the same thing, but instead switch
-      to the thing that would beat the thing that you just played.
-      -- simply if you won, play the hand your losing opponent just played.
-
+    - WON: If you won, play the hand your losing opponent just played.
     - LOST: If you lose, switch to the thing that beats the hand that your opponent just played.
+    >>> get_ai_move_win_strategy('ai', 'rock')
+    'rock'
+    >>> get_ai_move_win_strategy('ai', 'paper')
+    'paper'
+    >>> get_ai_move_win_strategy('human', 'rock')
+    'paper'
+    >>> get_ai_move_win_strategy('human', 'scissors')
+    'rock'
     """
     # ******** ai WON ************
     if (last_round_winner == 'ai'):
         # WON? play the hand your losing opponent just played
         return last_round_human_move
-
     # ******** ai LOST ************
     if (last_round_winner == 'human'):
         # LOST? switch to the hand that beats your opponent's last round's move
@@ -78,9 +82,8 @@ def get_ai_move_win_strategy (last_round_winner, last_round_human_move):
         if (last_round_human_move == 'paper'):
             # ai move: what would beat paper?
             return 'scissors'
-        # only thing left scissors. ai move: Rock (rock beats sicssors)
+        # only thing left scissors. ai move: Rock (rock beats scissors)
         return 'rock'
-
     # ******** tie, no winner ************
     if (last_round_winner == 'tie'):
         # no strategy, just get random move
@@ -145,7 +148,7 @@ def get_winner(ai_move, human_move):
 
 def get_ai_move():
     """
-    from random library random integer 1, 2, 3
+    uses random module to generate random int 1 | 2 | 3
     returns string representing what ai move (rock | paper | scissors)
     """
     value = random.randint(1, 3)
