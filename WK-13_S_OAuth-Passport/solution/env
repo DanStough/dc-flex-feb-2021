@@ -1,0 +1,3 @@
+# Your file should be named ".env" so that it's not committed in git
+GITHUB_CLIENT_ID*****FROM GITHUB********
+GITHUB_CLIENT_SECRET=*****FROM GITHUB********
