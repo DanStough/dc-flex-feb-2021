@@ -15,18 +15,22 @@ function rockPaperScissors() {
       console.log(`last round winner: ${lastRoundWinner} and last round human move: ${lastRoundHumanMove}`);
       var aiMove = getAiMoveWinningStrategy(lastRoundWinner, lastRoundHumanMove);
     }
+    console.log(`what is aiMove after the check first round or not: ${aiMove} `);
+
     var humanMove = getHumanMove();
     // store humanMove for the next round help for aiMove
     lastRoundHumanMove = humanMove;
     // 2. Who beat whom?
     var winner = getWinner(aiMove, humanMove);
     lastRoundWinner = winner;
+    totalScore = updateScore(winner, totalScore);
     alert(`
     AI move was ${aiMove}
     Human move was ${humanMove}
     Winner is ${winner}
+
+    current score for human: ${totalScore}
     `);
-    totalScore = updateScore(winner, totalScore);
   }
   alert(`Total Score: ${totalScore}`);
 }
@@ -43,25 +47,28 @@ function getAiMoveWinningStrategy(lastRoundWinner, lastRoundHumanMove) {
 
   // ******** AI WON ************
   if (lastRoundWinner === 'AI') {
-    console.log(`I am inside of winner AI if block since ${lastRoundWinner} was winner!`)
-    // if you won, play the hand your losing opponent just played
+    // WON. play the hand your losing opponent just played
     return lastRoundHumanMove;
   }
 
   // ******** AI LOST ************
   if (lastRoundWinner === 'Human') {
-    console.log(`I am inside of Lost AI if block since ${lastRoundWinner} was winner!`)
-    // switch to the thing that beats the hand that your opponent just played.
+    // LOST. switch to the hand that beats your opponent's last round's move
     if (lastRoundHumanMove === 'rock') {
+      // ai move: what would beat rock?
       return 'paper';
     }
     if (lastRoundHumanMove === 'paper') {
+      // ai move: what would beat paper?
       return 'scissors';
     }
+    // only thing left scissors. ai move: Rock (rock beats scissors)
     return 'rock';
   }
 
+  // ******** tie, no winner ************
   if (lastRoundWinner === 'Tie') {
+    // no strategy, get random move
     return getAIMove();
   }
 }
@@ -80,11 +87,8 @@ function getAIMove() {
 
 function updateScore(winner, totalScore) {
   /**
-   * return totalScore for human
-   * there are 3 paths:
-   * 1. if current winner is Human increment
-   * 2. if current winner is AI decrement
-   * 3. if tie then do nothing
+   * returns updated total score for human
+   * there are 3 scenarios: human | ai | tie
    */
   if (winner === 'Human') {
     totalScore++;
@@ -100,14 +104,35 @@ function updateScore(winner, totalScore) {
 }
 
 function getHumanMove() {
-  var getHumanMove = prompt(`
-    What do you play?
-    (rock | paper | scissors)
-  `);
-  getHumanMove = getHumanMove.toLowerCase();
-  return getHumanMove;
+  while (true) {
+    var humanMove = prompt(`
+      What do you play?
+      (rock | paper | scissors)
+    `);
+    humanMove = humanMove.toLowerCase();
+    if (isValidMove(humanMove)) {
+      return humanMove;
+    }
+    alert('Invalid move! 🥓');
+  }
 }
 
+function isValidMove (move) {
+  /**
+   * parameter is move: str representing what Human entered
+   * return: boolean True if move was valid
+   */
+  if (move === 'rock') {
+    return true;
+  }
+  if (move === 'paper') {
+    return true;
+  }
+  if (move === 'scissors') {
+    return true;
+  }
+  return false;
+}
 
 function getWinner(aiMove, humanMove) {
   /**
