@@ -25,17 +25,6 @@
 
             .avatar {
                 border-radius: 50%;
-                width: 75px;
-            }
-
-            .photo-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-            }
-
-            .post {
-                width: 100px;
             }
         </style>
     </head>
@@ -43,18 +32,8 @@
         <div class="content">
             <h1 class="text-center"> 📸 FACEGRAM</h1>
             <div>
-                <div class="profile">
-                    <img src="${profile.avatar}" class="avatar" />
-                    <h2 class="profile-name">${profile.name}</h2>
-                </div>
-                <br />
-                <h5 class="text-center" >Email: <a href="mailto:${profile.email}">${profile.email}</a></h5>
-                <hr />
-                <div class="photo-container">
-                    ${profile.images.map( image => `
-                        <img class="post" src="${image}" />
-                    `).join("")}
-                </div>
+               <h1 class="text-center">404 Friend not found</h1>
+               <img src="https://media.giphy.com/media/RIAOV7vXdehyGB6tIg/giphy.gif" />
             </div>
         </div>
     </body>
