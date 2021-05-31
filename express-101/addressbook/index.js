@@ -11,7 +11,7 @@ console.log('db: ', db);
 
 const app = express();
 
-const server = http.createServer(app);  // HTTP server using Express `app` which brings more flexibility
+const server = http.createServer(app);  // HTTP server using Express `app` which brinkg more flexibility
 
 // setup install es6 template 
 app.engine('html', es6Renderer);

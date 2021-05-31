@@ -26,3 +26,9 @@ CREATE TABLE track (
   UNIQUE(title, album_id),
   PRIMARY KEY(id)
 );
+
+CREATE TABLE posts (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT Now()
+);

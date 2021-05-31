@@ -18,9 +18,9 @@ VALUES
 INSERT INTO trainers
   (name, isGymLeader, pokemonSlot1, pokemonSlot2, pokemonSlot3, pokemonSlot4, pokemonSlot5, pokemonSlot6)
 VALUES
-  ('Ash', 'FALSE', 1, 10, null, null, null, null),
-  ('Misty', 'TRUE', 7, null, null, null, null, null),
-  ('Brock', 'TRUE', 3, 6, 9, null, null, null),
-  ('Axle', 'TRUE', 2, 4, 8, null, null, null),
-  ('Moxie', 'FALSE', 1, null, 9, 9, 9, 9)
+  ('Ash', FALSE, 1, 10, null, null, null, null),
+  ('Misty', TRUE, 7, null, null, null, null, null),
+  ('Brock', TRUE, 3, 6, 9, null, null, null),
+  ('Axle', TRUE, 2, 4, 8, null, null, null),
+  ('Moxie', FALSE, 1, null, 9, 9, 9, 9)
 ;

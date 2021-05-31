@@ -1,7 +1,7 @@
 {
-  "name": "demo",
+  "name": "express-101",
   "version": "1.0.0",
-  "description": "",
+  "description": "- https://learn.digitalcrafts.com/flex/lessons/back-end-foundations/express-101/#add-routes-with-parameters",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

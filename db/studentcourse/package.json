@@ -1,0 +1,18 @@
+{
+  "name": "studentcourse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:create": "createdb studentcourse",
+    "db:destroy": "dropdb studentcourse",
+    "db:init": "psql -f schema.sql studentcourse",
+    "db:seed": "psql -f seed.sql studentcourse",
+    "db:reset": "npm run db:destroy; npm run db:create && npm run db:init && npm run db:seed",
+    "db:resetnoseed": "npm run db:destroy; npm run db:create && npm run db:init",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -8,11 +8,11 @@ CREATE TABLE pokemon (
 CREATE TABLE trainers (
   id SERIAL PRIMARY KEY,
   name VARCHAR(128),
-  isgymleader BOOLEAN,
-  pokemonslot1 INTEGER,
-  pokemonslot2 INTEGER,
-  pokemonslot3 INTEGER,
-  pokemonslot4 INTEGER,
-  pokemonslot5 INTEGER,
-  pokemonslot6 INTEGER
+  isGymLeader BOOLEAN,
+  pokemonSlot1 INTEGER,
+  pokemonSlot2 INTEGER,
+  pokemonSlot3 INTEGER,
+  pokemonSlot4 INTEGER,
+  pokemonSlot5 INTEGER,
+  pokemonSlot6 INTEGER
 );

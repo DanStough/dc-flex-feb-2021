@@ -3,7 +3,9 @@ INSERT INTO artist
 VALUES
   ('Max'),
   ('Pink'),
-  ('BTS')
+  ('BTS'),
+  ('Led Zeppelin'),
+  ('AC/DC')
 ;
 
 INSERT INTO album
@@ -11,14 +13,17 @@ INSERT INTO album
 VALUES
   ('Blue heart', 2),
   ('Fax it', 1),
-  ('Dynamite', 3)
+  ('BE', 3),
+  ('Who Made Who', 5),
+  ('IV', 4)
 ;
 
 INSERT INTO genre
   (name)
 VALUES
   ('Rock'),
-  ('Metal')
+  ('Metal'),
+  ('Kpop')
 ;
 
 INSERT INTO track
@@ -27,5 +32,13 @@ VALUES
   ('Black Dog', 5, 297, 0, 2, 1),
   ('Stairway', 5, 482, 0, 2, 1),
   ('About to Rock', 5, 313, 0, 1, 2),
-  ('Who Made Who', 5, 207, 0, 1, 2)
+  ('Who Made Who', 5, 207, 0, 1, 2),
+  ('Dynamite', 5, 208, 0, 3, 3),
+  ('Life Goes On', 5, 301, 0, 3, 3)
+;
+
+INSERT INTO posts 
+  (title)
+VALUES
+  ('Life Goes On');
 ;

@@ -1,3 +1,5 @@
+# Code in Place [Final Project](https://compedu.stanford.edu/codeinplace/public/)
+
 <img src="./rps-white.png">
 
 # Implements the game of Rock-Paper-Scissors!

@@ -1,7 +1,7 @@
 {
-  "name": "demo",
+  "name": "htmlRes",
   "version": "1.0.0",
-  "description": "",
+  "description": "Create an Express app with a route /greet that returns a string in an h1 tag:",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-es6-template-engine": "^2.2.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
