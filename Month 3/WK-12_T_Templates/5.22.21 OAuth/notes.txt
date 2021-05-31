@@ -1,0 +1,36 @@
+1. Review Countries Solution
+2. Mini-Lecture:
+    1. What is Authentication?
+    2. What is OAuth?
+3. Class Demo: [Passport.js](http://www.passportjs.org/) w/ [Github OAuth2 Login](http://www.passportjs.org/packages/passport-github2/)
+4. Exercise: [FaceGram Pt. 3 - Authentication Anarchy](https://github.com/DanStough/dc-flex-feb-2021/blob/4ddc7a1f1cb3069fd816aa4ffca9ceef3174bc6c/WK-13_S_OAuth-Passport/exercise/README.md)
+
+
+Notes
+
+Authentication => Who are you?
+Authorization => What can you do?
+
+Ways to authenticate
+
+1. Anonymous - Public Access  - No Authorization / Guest Login
+2. Basic Authorization / Local - username and Password
+3. Federated Login / OAuth2 - Logging in through another site ie. Facebook, gmail etc. 
+
+Definitions to learn
+Cookies
+Sessions
+Token
+user
+Route Param
+Query Param
+
+
+Diagram 1 
+
+Diagram 2 
+C:\Users\Teila\Digital Crafts Learning\dc-flex-feb-2021\5.22.21 OAuth\Diagram 2  DC5.22.jpeg
+
+in Browser Inspect tool 
+
+Inspect>Application> Storage> clear site data - Clears cookies 

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="description" content="Express ES6 Template engine - from strings to backtick syntax and template literals">
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Raleway:500);
+		@import url(https://fonts.googleapis.com/css?family=Oswald);
+		body {
+			background: #f9f9f9 url(bg.jpg);
+			max-width: 52em;
+			padding: 0 1em;
+			margin: 0 auto;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		    	font-size: 14px;
+		    	line-height: 20px;
+		    	color: #333;
+		}
+		textarea,
+		.result {
+			border: 1px solid #999;
+			resize: vertical;
+			padding: 1ex;
+			border-radius: 2px;
+			width: 100%;
+			color: #666;
+			background: white;
+    			box-sizing: border-box;
+		}
+		textarea {
+			height: 14ex;
+		}
+		.ranking {
+			color: #f44336;
+			min-width: 108px;
+			vertical-align: bottom;
+		}
+		.engine-name {
+			color: #f44336;
+			min-width: 100px;
+			text-align: right;
+		}
+		.engine-name:after {
+			content: ' » ';
+			color: yellow;
+		}
+		.benchmarks {
+			color: yellow;
+			font-weight: bold;
+    		background: #ccc;
+			min-width: 350px;
+			width: 100%;
+		}
+		tbody tr:first-child td {
+			color: #4a9a07;
+		}
+		table tbody td.ops {
+			min-width: 90px;
+			padding-right: 10px;
+			width: 16%;
+			text-align: right;
+			vertical-align: bottom;
+			color: #1e7f9a;
+		}
+		.benchmark-title {
+			text-align: center;
+		}
+		.snip1296 {
+			font-family: 'Raleway', Arial, sans-serif;
+			position: relative;
+			color: #bdbdbd;
+			margin: 50px auto 80px;
+			max-width: 285px;
+			width: 100%;
+			text-align: center;
+			font-size: 16px;
+			box-sizing: content-box;
+		}
+		.snip1296 h1,
+		.snip1296 h5 {
+			margin: 0;
+			text-transform: uppercase;
+		}
+		.snip1296 h1 {
+			font-family: 'Oswald', Arial, sans-serif;
+			font-size: 2.8em;
+			line-height: 50px;
+			position: relative;
+			color: #1e7f9a;
+			text-align: center;
+			margin: 0 0 7px;
+		}
+		.snip1296 h5 {
+			margin: 0 40px;
+			padding: 5px 0;
+			font-weight: 500;
+			color: #4a9a07;
+			border-top: 4px solid #bdbdbd;
+			border-bottom: 4px solid #bdbdbd;
+			white-space: nowrap;
+		}
+		.snip1296 h5:after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			top: 113px;
+			left: 50%;
+			transform: translate(-50%);
+			border-width: 20px 30px;
+			border-style: solid;
+			border-color: #f44336 #f44336 transparent #f44336;
+		}
+		.snip1296 h6 {
+			margin: 0 0 2px;
+			position: relative;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+		}
+		.sash {
+			text-transform: uppercase;
+			transform: rotate(45deg);
+			font-family: 'Raleway', Arial, sans-serif;
+			display: block;
+			position: absolute;
+			top: 50px;
+			right: -57px;
+			background: #1e7f9a;
+			color: white;
+			padding: 1ex 4em;
+			text-decoration: none;
+		}
+		code {
+			background: beige;
+			padding: 0 2px;
+			border-radius: 2px;
+			border: 1px solid #999;
+		}
+		.feature-list {
+			display: flex;
+			width: 100%;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		.author-href {
+			padding-bottom: 4ex;
+		}
+		.ch-item {
+			width: 220px;
+			height: 220px;
+			border-radius: 50%;
+			position: relative;
+			margin-bottom: 2ex;
+			box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+			cursor: default;
+		}
+		.ch-img-1 { 
+			background-image: url(1.jpg);
+		}
+		.ch-img-2 { 
+			background-image: url(2.jpg);
+		}
+		.ch-img-3 { 
+			background-image: url(3.jpg);
+		}
+		.ch-img-4 { 
+			background-image: url(4.jpg);
+		}
+		.ch-img-5 { 
+			background-image: url(5.jpg);
+		}
+		.ch-img-6 { 
+			background-image: url(6.jpeg);
+		}
+		.ch-info-wrap {
+			position: absolute;
+			width: 180px;
+			height: 180px;
+			border-radius: 50%;
+			perspective: 800px;
+			transition: all 0.4s ease-in-out;
+			top: 20px;
+			left: 20px;
+			background: #f9f9f9 url(../images/bg.jpg);
+			box-shadow: 
+				0 0 0 20px rgba(255,255,255,0.2), 
+				inset 0 0 3px rgba(115,114, 23, 0.8);
+		}
+		.ch-info {
+			position: absolute;
+			width: 180px;
+			height: 180px;
+			border-radius: 50%;
+			transition: all 0.4s ease-in-out;
+			transform-style: preserve-3d;
+		}
+		.ch-info > div {
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background-position: center center;
+			backface-visibility: hidden;
+		}
+		.ch-info .ch-info-back {
+			transform: rotate3d(0,1,0,180deg);
+			background: #000;
+		}
+		.ch-info h3 {
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-size: 14px;
+			padding: 15px 20px 0 20px;
+			text-align: center;
+			text-shadow: 
+				0 0 1px #fff, 
+				0 1px 2px rgba(0,0,0,0.3);
+		}
+		.ch-info p {
+			color: #fff;
+			padding: 10px 5px;
+			margin: 0 20px;
+			font-style: italic;
+			text-align: center;
+			font-size: 12px;
+			border-top: 1px solid rgba(255,255,255,0.5);
+		}
+		.ch-info p a {
+			display: block;
+			color: rgba(255,255,255,0.7);
+			font-style: normal;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 9px;
+			letter-spacing: 1px;
+			padding-top: 4px;
+			font-family: 'Open Sans', Arial, sans-serif;
+		}
+		.ch-info p a:hover {
+			color: rgba(255,242,34, 0.8);
+		}
+		.ch-item:hover .ch-info-wrap {
+			box-shadow: 
+				0 0 0 0 rgba(255,255,255,0.8), 
+				inset 0 0 3px rgba(115,114, 23, 0.8);
+		}
+		.ch-item:hover .ch-info {
+			transform: rotate3d(0,1,0,-180deg);
+		}
+	</style>
+	<title>Express ES6 temlpate engine - the fastest and unopinionated javascript template engine for Node and Express</title>
+</head>
+<body>
+<a href="https://github.com/dondido/express-es6-template-engine" class="sash">Fork me on GitHub</a>
+
+<div class="snip1296">
+  <h6>Est. 2015</h6>
+  <h1>ES6RENDERER</h1>
+  <h5>Express Template Engine</h5>
+</div>
+
+<h2>Origins</h2>
+<p>The art of creating code that is "environment agnostic" recognised as "Isomorphic JavaScript", allows us to render the views of the application from the server (during the initialisation of the app) and then keep rendering the other views directly in the browser (avoiding a full page refresh) while the user keep navigating across the different sections. One of the advantages of having ES6 renderer as template engine for the backend of a web application is that one have to deal only with javascript template literals as a single syntax across the web stack. With this in mind the engine can be seen as the perfect tool that facilitates logic sharing between the frontend and the backend in order to reduce the codebase duplication between the browser and the server to the bare minimun. Express ES6 temlpate engine is a minimal and flexible Node web application library, providing a robust set of features for building single and multi page, and hybrid web applications. As a framework-independent technology, ES6 Renderer is an engine one can adopt and hit the ground running with immediately.
+</p>
+
+<h2>Features</h2>
+<div class="feature-list">
+	<div class="ch-item ch-img-1">
+		<div class="ch-info-wrap">
+			<div class="ch-info">
+				<div class="ch-info-front ch-img-1"></div>
+				<div class="ch-info-back">
+					<h3>NO DEPENDENCIES</h3>
+					<p>A simple and lightweight vanilla library.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ch-item ch-img-2">
+		<div class="ch-info-wrap">
+			<div class="ch-info">
+				<div class="ch-info-front ch-img-2"></div>
+				<div class="ch-info-back">
+					<h3>ZERO LEARNING</h3>
+					<p>Grasping new syntax is not required.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ch-item ch-img-3">
+		<div class="ch-info-wrap">
+			<div class="ch-info">
+				<div class="ch-info-front ch-img-3"></div>
+				<div class="ch-info-back">
+					<h3>LOGIC STATEMENTS</h3>
+					<p>Conditional operators and ternary expressions.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ch-item ch-img-4">
+		<div class="ch-info-wrap">
+			<div class="ch-info">
+				<div class="ch-info-front ch-img-4"></div>
+				<div class="ch-info-back">
+					<h3>LOOPS (ITERATIONS)</h3>
+					<p>Native ways to iterate over arrays and objects.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ch-item ch-img-5">
+		<div class="ch-info-wrap">
+			<div class="ch-info">
+				<div class="ch-info-front ch-img-5"></div>
+				<div class="ch-info-back">
+					<h3>PARTIALS SUPPORT</h3>
+					<p>Layout and partials support.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ch-item ch-img-6">
+		<div class="ch-info-wrap">
+			<div class="ch-info">
+				<div class="ch-info-front ch-img-6"></div>
+				<div class="ch-info-back">
+					<h3>TEMPLATE PRECOMPILATION</h3>
+					<p>Precompiling and template caching.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<p>
+	<h2>Online compiler</h2> 
+	<p>Every developer has been in a situation where they simply want to try and evaluate a framework or library, without having to install it or include it in a project. The online compiler provides a custom environment to test and fiddle with Express ES6 template engine functionality right inside a browser and see the results as they type in real time. A quick tour of the engine logic implementation will give you a better understanding of what it provides and why you should use it. </p><p> The general rendering process of the engine is rather simple. <code>es6Renderer('template', {locals})</code> compiles the provided source code into a javaScript function. Calling that resultant function with an object as an argument returns a string of HTML rendered with our data. This methods combine compiling and rendering into one step. The <code>'template'</code> string used as a first argument is a reference to a <code>'template.html'</code> file in a view directory with a content presented in the first text area below (see Template). The data object called <code>'locals'</code> provided in the second text area (see Data) has properties that are local variables within the content.</p> 
+	<h4>Template</h4>
+	<textarea autocomplete="off" class="template-input"><div class="simple-1" style="background-color: blue; border: 1px solid black"><div class="colors"><span>Hello ${name}! <strong>You have ${messageCount} messages!</strong></span><ul>${colors ? colors.reduce((m, color) => m + '<li>' + color + '</li>', '') : '<li>No colors!</li>'}</ul></div><button class="${primary ? 'primary' : 'secondary'}">${buttonLabel}</button></div></textarea>
+	<h4>Data</h4>
+	<textarea autocomplete="off" class="data-input">
+{
+    "name": "George Washington",
+    "messageCount": 999,
+    "colors": ["red", "green", "blue", "yellow", "orange", "pink", "black", "white", "beige", "brown", "cyan", "magenta"],
+    "primary": true,
+    "buttonLabel": "Welcome to the wonderful world of templating engines!"
+}
+	</textarea>
+	<h4>Result</h4>
+	<div class="result"></div>
+</p>
+
+<h2>Benchmarks</h2>
+<p>It’s not uncommon that from time to time I am asked about what template engine do I use and why. After my reply, I get something like: “isn’t that one slow?”. Usually, when developers talk in regards to performance, I always utter something like: “well, that depends on …”, and there one can insert his slow performance reasoning of choice, if it can be bad or not that bad.</p>
+<p>Benchmark testing was done with Marko's brilliant <a href="https://github.com/marko-js/templating-benchmarks">Templating benchmark suite</a>. Testing ES6 Renderer performance was a great opportunity to see how it stacked-up beside others. Our speed test compiled one main template containing an array of string, an object literal and conditional statements.</p>
+<table class="benchmarks">
+	<thead>
+		<tr><td colspan="3" class="benchmark-title">RUNTIME PERFORMANCE</td></tr>
+	</thead>
+	<tbody>
+		<tr><td class="engine-name">✓ es6Renderer</td><td class="ops">300,987 op/s</td><td class="ranking">(fastest)</td></tr>
+		<tr><td class="engine-name">✗ pug</td><td class="ops">155,015 op/s</td><td class="ranking">(48.50% slower)</td></tr>
+		<tr><td class="engine-name">✗ marko</td><td class="ops">143,375 op/s</td><td class="ranking">(52.37% slower)</td></tr>
+		<tr><td class="engine-name">✗ dot</td><td class="ops">129,364 op/s</td><td class="ranking">(57.02% slower)</td></tr>
+		<tr><td class="engine-name">✗ handlebars</td><td class="ops">46,871 op/s</td><td class="ranking">(84.43% slower)</td></tr>
+		<tr><td class="engine-name">✗ swig</td><td class="ops">43,996 op/s</td><td class="ranking">(85.38% slower)</td></tr>
+		<tr><td class="engine-name">✗ dust</td><td class="ops">39,834 op/s</td><td class="ranking">(86.77% slower)</td></tr>
+		<tr><td class="engine-name">✗ jade</td><td class="ops">21,373 op/s</td><td class="ranking">(92.90% slower)</td></tr>
+		<tr><td class="engine-name">✗ nunjucks</td><td class="ops">18,313 op/s</td><td class="ranking">(93.92% slower)</td></tr>
+		<tr><td class="engine-name">✗ vue</td><td class="ops">5,251 op/s</td><td class="ranking">(98.26% slower)</td></tr>
+		<tr><td class="engine-name">✗ react</td><td class="ops">2,218 op/s</td><td class="ranking">(99.26% slower)</td></tr>
+	</tbody>
+</table>
+<p>As we see from the chart above ES6 Renderer is the fastest of the all engines compared. It was almost twice as fast as the second place runner on the list. The data presented above is not intended to trash about any of the view engines. The procedure to make the comparison on performance is quite simple and not scientific at all. From a technical point of view it's up to the developer to choose the templating engine that makes him more productive. It is also important to bear in mind that for frontend designers accustomed to code in HTML only, the learning curve for them will be of relevance.</p>
+
+<h2>Source</h2>
+<a href="https://github.com/dondido/express-es6-template-engine">github.com/dondido/express-es6-template-engine</a>
+<p>by Dian Dimitrov, MIT license</p>
+
+<h2>NPM</h2>
+<a href="https://www.npmjs.com/package/express-es6-template-engine">https://www.npmjs.com/package/express-es6-template-engine</a>
+
+<h2>Author</h2>
+<a href="http://lameculture.gamesurprise.com/" class="author-href">@dondido</a>
+
+<script type="text/javascript">
+	const compile = (content, $ = '$') => Function($, 'return `' + content + '`;');
+	const templateInput = document.querySelector('.template-input');
+	const dataInput = document.querySelector('.data-input');
+	const result = document.querySelector('.result');
+	let data;
+	const updateResult = () => {
+		try {
+			if(typeof data === 'string' || !data) {
+				return result.textContent = compile(templateInput.value)(data);
+			}
+			const dataKeys = Object.keys(data);
+	        return result.textContent = compile(templateInput.value, dataKeys)(...dataKeys.map(i => data[i]));
+        } catch(e) {
+	        result.textContent = 'Could not parse template input...'
+	    }	
+		
+	}
+	const updateTemplate = () => {
+	    try {
+	        updateResult();
+	    } catch(e) {
+	        result.textContent = 'Could not parse template input...'
+	    }
+	};
+	const updateData = () => {
+	    try {
+	        data = eval('(' + dataInput.value + ')');
+	        
+	    } catch(e) {
+	    	data = dataInput.value;
+	    }
+	    updateResult();
+	};
+	templateInput.addEventListener('keyup', updateResult);
+	dataInput.addEventListener('keyup', updateData);
+	updateData();
+</script>
+
+</body></html>
