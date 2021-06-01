@@ -1,0 +1,13 @@
+
+INSERT INTO pokemon(id,name,type,evolvesFormID)VALUES(1,'Bulbasaur','Grass',null);
+INSERT INTO pokemon(id,name,type,evolvesFormID)VALUES(2,'Ivysaur','Grass', 1);
+INSERT INTO pokemon(id,name,type,evolvesFormID)VALUES(3,'Venusaur','Grass', 2);
+INSERT INTO pokemon(id,name,type,evolvesFormID)VALUES(4,'Charmander','Fire',null);
+INSERT INTO pokemon(id,name,type,evolvesFormID)VALUES(5,'Charmeleon','Fire', 4);
+INSERT INTO pokemon(id,name,type,evolvesFormID)VALUES(6,'Charizard','Fire', 5);
+INSERT INTO pokemon(id,name,type,evolvesFormID)VALUES(7,'Squirtle','Water',null);
+INSERT INTO pokemon(id,name,type,evolvesFormID)VALUES(8,'Wartortle','Water', 7);
+INSERT INTO pokemon(id,name,type,evolvesFormID)VALUES(9,'Blastoise','Water',8);
+INSERT INTO pokemon(id,name,type,evolvesFormID)VALUES(10,'Caterpie','Bug', null);
+INSERT INTO pokemon(id,name,type,evolvesFormID)VALUES(11,'Metapod','Bug',10);
+INSERT INTO pokemon(id,name,type,evolvesFormID)VALUES(12,'Butterfree','Bug', 11);
