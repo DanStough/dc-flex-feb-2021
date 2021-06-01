@@ -17,5 +17,6 @@
     "devArray": "nodemon node indexWArray.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "keywords": []
 }

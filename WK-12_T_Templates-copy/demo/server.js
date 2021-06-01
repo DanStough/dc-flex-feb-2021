@@ -48,8 +48,36 @@ app.get("/donuts/:id", (req, res) => {
     res.status(404)
        .render('notfound');
   } else {
-    res.render("donut");
+    /**
+     * if donut[id] found then render static donut.html
+     * and pass donut: donut value (shorthand notation)
+     */
+    res.render('donut', {
+      locals: {
+        donut
+      }
+    });
   }
+});
+
+/**
+ * Express assigns value for matched path in `req.path`
+ * /donuts = req.path
+ * inside locals obj, I'm sending donuts var w/ values as donuts obj
+ */
+app.get('/donuts', (req, res) => {
+  // returns array of donut ids
+  const donutsIdArray = Object.keys(donuts);
+  // returns array of each donut obj (donuts[id])
+  const newDonutsArray = donutsIdArray.map(id => donuts[id]);
+
+  res.render('donuts-list', {
+    locals: {
+      title: `List of donuts`,
+      donuts: newDonutsArray,
+      path: req.path
+    }
+  });
 });
 
 app.get("*", (req, res) => {

@@ -27,7 +27,7 @@ app.get('/friends/:handle', (req, res) => {
    *  or /friend/teila, part of url treated just like arg
    *  in express which is req.params.handle 
    */
-  // obj destructuring, let handle = req.query.handle = @chaz if /friends/@chaz
+  // obj destructuring, let handle = req.params.handle = @chaz if /friends/@chaz
   const {handle} = req.params;
   // const friend = db.find(f => f.handle === handle);
   const friend = db.find(friend => {

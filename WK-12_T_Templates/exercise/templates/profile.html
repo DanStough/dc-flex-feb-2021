@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${title}</title>
+  <title>${profile.name} info</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
   <style>
     .content {
@@ -23,30 +23,44 @@
         text-align: center;
     }
 
-    .header {
+    .text-center {
         text-align: center;
     }
 
     .avatar {
         border-radius: 50%;
     }
+
+    .photo-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .post {
+        width: 100px;
+    }
   </style>
 </head>
 <body>
   <main class="content">
-    <h1 class="header">${title}</h1>
+    <h1 class="text-center">${title}</h1>
     <div>
-      ${
-        profileObjArr.map(profile => `
-          <div class="profile">
-            <img class="avatar" src="${profile.avatar}" alt="${profile.name}">
-            <h2 class="profile-name">
-              <a href="${path}profile/${profile.id}">${profile.name}</a>
-            </h2>
-          </div>
-          <br>
-        `).join('')
-      }
+      <div class="profile">
+        <img class="avatar" src="${profile.avatar}" alt="${profile.name}">
+        <h2 class="profile-name">${profile.name}</h2>
+      </div>
+      <br>
+      <h5 class="text-center">Email: <a href="mailto:${profile.email}">${profile.email}</a>
+      </h5>
+      <hr>
+      <div class="photo-container">
+        ${
+          profile.images.map(imageURL => `
+            <img class="post" src="${imageURL}" alt="${profile.name}">
+          `).join('')
+        }
+      </div>
     </div>
   </main>
 </body>
