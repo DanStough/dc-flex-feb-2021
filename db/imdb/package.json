@@ -1,0 +1,26 @@
+{
+  "name": "imdb",
+  "version": "1.0.0",
+  "description": "1) Clone this repository 2) Unzip titles.sql.zip 3) Create a new database called \"imdb\" 4) In your terminal, run `pg_dump imdb < titles.sql` 5) Your imdb db should now have a table with 5 million rows of movie data!",
+  "main": "index.js",
+  "scripts": {
+    "db:create": "createdb imdb",
+    "db:destroy": "dropdb imdb",
+    "db:init": "psql -f schema.sql imdb",
+    "db:seed": "psql -f seed.sql imdb",
+    "db:reset": "npm run db:destroy; npm run db:create && npm run db:init && npm run db:seed",
+    "db:resetnoseed": "npm run db:destroy; npm run db:create && npm run db:init",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heggy231/imdb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heggy231/imdb/issues"
+  },
+  "homepage": "https://github.com/heggy231/imdb#readme"
+}
