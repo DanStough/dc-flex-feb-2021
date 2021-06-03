@@ -16,7 +16,7 @@ VALUES
   ('BE', 3),
   ('Who Made Who', 5),
   ('IV', 4)
-;
+-- ;
 
 INSERT INTO genre
   (name)

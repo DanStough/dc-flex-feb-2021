@@ -1,0 +1,23 @@
+.content {
+    width: 400px;
+    margin: auto;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-name {
+    vertical-align: middle;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.avatar {
+    border-radius: 50%;
+}

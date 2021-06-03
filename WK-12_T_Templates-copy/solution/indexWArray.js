@@ -25,17 +25,19 @@ app.get("/profile/:id", (req, res) => {
     const friend = data.find(item => item.id === id);
     console.log(friend);
     
-    if(!friend){
+    if (!friend){
         console.log("not found");
         res.status(404).render("404");
+    } else {
+        // es6templating
+        res.render("profile", {
+            locals: {
+                profile: friend
+            }
+        })
     }
 
-    // es6templating
-    res.render("profile", {
-        locals: {
-            profile: friend
-        }
-    })
+
 })
 
 // 5. List page here

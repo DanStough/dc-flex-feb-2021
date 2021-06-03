@@ -1,5 +1,5 @@
 {
-  "name": "facegram",
+  "name": "facegram part 2",
   "version": "1.0.0",
   "description": "Something like social media",
   "main": "index.js",
@@ -13,7 +13,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon node server.js"
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC"
