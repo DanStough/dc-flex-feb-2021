@@ -1,9 +1,12 @@
 const express = require("express");
+const cors = require('cors');
 const es6Renderer = require('express-es6-template-engine');
 
 const app = express();
 
 // 1. Add express middlewares for static files and body parsing
+app.use(cors());
+app.use(express.static('public'));
 
 // Configure Template Engine
 app.engine('html', es6Renderer);
@@ -18,7 +21,7 @@ app.get("/profile/:id", (req, res) => {
     const profile = data[req.params.id]
 
     if(!profile){
-        res.status(404).send("profile id not found")
+        res.status(404).render('notfound');
     }
 
     res.render("profile", {

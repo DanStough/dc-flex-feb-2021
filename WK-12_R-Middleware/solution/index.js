@@ -9,6 +9,8 @@ const app = express();
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
+app.use(express.static('public'));
+
 // Configure Template Engine
 app.engine('html', es6Renderer);
 app.set('views', 'templates');
@@ -55,8 +57,6 @@ app.get("/", (req, res)=>{
         }
     })
 })
-
-app.use(express.static('public'));
 
 app.listen(3000, ()=>{
     console.log("running on port 3000")

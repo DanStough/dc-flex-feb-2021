@@ -1,9 +1,10 @@
 {
-  "name": "facegram part 2",
+  "name": "facegram2",
   "version": "1.0.0",
   "description": "Something like social media",
   "main": "index.js",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-es6-template-engine": "^2.2.3",
     "faker": "^5.5.3"
