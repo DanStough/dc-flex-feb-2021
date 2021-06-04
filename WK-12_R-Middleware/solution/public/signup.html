@@ -43,6 +43,7 @@
             <h1 class="text-center"> 📸 FACEGRAM</h1>
             <h3 class="text-center">SIGNUP PAGE </h3>
             <div>
+                <!-- <form action="/profile" method="POST" id="signup"> -->
                 <form id="signup">
                     <div class="mb-3">
                       <label for="name" class="form-label">Name</label>
@@ -71,7 +72,7 @@
                     const entries = formdata.entries();
                     const data = Object.fromEntries(entries);
 
-                    // See API docs: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+                    // See API docs: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch, built into browser that any route with data like api, only for front end
                     fetch("/profile", {
                         "method": "POST",
                         "headers": {

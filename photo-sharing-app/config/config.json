@@ -1,6 +1,6 @@
 {
   "development": {
-    "username": "postgres",
+    "username": "heggy",
     "password": null,
     "database": "photo_share_dev2",
     "host": "127.0.0.1",

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capture Form Data Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Address Book</h2>
+  <form id="form">
+    <fieldset>
+      <legend>Contact Detail</legend>
+      <div class="field-label">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name">
+      </div>
+
+      <div class="field-label">
+        <label for="address">Address</label>
+        <input id="address" type="text" name="address">
+      </div>
+
+      <div class="field-label">
+        <label for="phone">Phone</label>
+        <input id="phone" type="text" name="phone">
+      </div>
+
+      <div class="field-label">
+        <label for="email">Email</label>
+        <input id="email" type="text" name="email">
+      </div>
+      <button type="submit" id="button">Add Contact</button>
+    </fieldset>
+  </form>
+  <script src="./main.js"></script>
+</body>
+</html>
