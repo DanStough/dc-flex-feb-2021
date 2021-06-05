@@ -1,0 +1,14 @@
+<header>
+  <nav class="navigation y-wrap">
+    <h1>GeoCap</h1>
+    <ul>
+      ${
+        navs.map(nav => `
+          <li>
+            <a class="${nav.class}" href="${nav.href}">${nav.name}</a>
+          </li>
+        `).join('')
+      }
+    </ul>
+  </nav>
+</header>

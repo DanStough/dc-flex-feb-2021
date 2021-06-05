@@ -1,4 +1,3 @@
-
 const express = require("express");
 const es6Renderer = require('express-es6-template-engine');
 
@@ -23,10 +22,10 @@ const data = require('./dataObject')
 // 4. Add a post method to handle adding a new user
 app.post("/profile", (req,res) => {
     console.log('full req.body', req.body);
-    const { name, email, avatar } = req.body;
+    // const { name, email, avatar } = req.body;
     // const name = req.body.name;
+    // console.log('name', name);
     
-    console.log('name', name);
     // Create ID
     const id = uuidv4();
 

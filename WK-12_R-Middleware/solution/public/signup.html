@@ -69,8 +69,12 @@
                     e.preventDefault();
                     
                     const formdata = new FormData(e.target);
-                    const entries = formdata.entries();
-                    const data = Object.fromEntries(entries);
+                    console.log("new FormData(e.target) ===>", formdata);
+                    const entries = formdata.entries();  // iterator key value
+                    console.log("formdata.entries() ===>", entries);
+                    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries
+                    const data = Object.fromEntries(entries); // transform a list of key-value pairs into an obj
+                    console.log("Object.fromEntries(entries) ===>", data);
 
                     // See API docs: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch, built into browser that any route with data like api, only for front end
                     fetch("/profile", {

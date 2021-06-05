@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoCap</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <main class="y-wrap buffer">
+    <h1>GeoCap App</h1>
+    <ul>
+      ${
+        countries.map(country => `
+          <li>
+            <div class="country">${country.country}</div>
+            <span>${country.city ? 'Capital: ' + country.city : 'Population: ' + country.population}</span>
+          </li>
+        `).join('')
+      }
+    </ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoCap app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/countries">All Countries</a></li>
+        <li><a href="/countries/a-e">A - E</a></li>
+        <li><a href="/countries/f-l">F - L</a></li>
+        <li><a href="/countries/m-r">M - R</a></li>
+        <li><a href="/countries/s-v">S - V</a></li>
+        <li><a href="/countries/w-z">W - Z</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="y-wrap buffer">
+    <!-- <div>${nameAE.map (item => item.join(""))}</div> -->
+    <h1>GeoCap App</h1>
+    <ul>
+      ${
+        countries.map( country => `
+          <li>
+            <div class="country">${country.country}</div>
+            <span>${
+              country.city ? 'Capital: ' + country.city : 
+                             'Population: ' + country.population
+            }</span>
+          </li>
+        `).join('')
+      }
+    </ul>
+  </main>
+
+</body>
+</html>

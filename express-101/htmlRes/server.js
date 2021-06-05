@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/greet/:handle', (req, res) => {
-  // handle = req.query.handle
+  // handle = req.params.handle
   const { handle } = req.params;
   // res.send(`<h1>hello! ${handle}</h1>`);
   res.render('home', {

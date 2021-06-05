@@ -1,0 +1,40 @@
+* {
+  color: #555;
+  font-family: 'sans-serif';
+  margin: 0;
+  padding: 0;
+}
+
+/* y-wrap means layout */
+.y-wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* spacing for my data */
+.buffer {
+  padding: 30px 0;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  /* row items to be center */
+  justify-content: center;
+}
+
+li {
+  border: 1px solid #ddd; /* ddd lighter gray*/
+  margin: 10px;
+  padding: 10px; /* padding between border and my text*/
+  /* fix the widths each row */
+  width: 200px;
+}
+
+.country {
+  color: black;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
