@@ -83,6 +83,10 @@ app.get('/countries', (req, res) => {
 
 
 app.get('/countries/:selection', (req, res) => {
+  /**
+   * route param - req.params variable, it exists
+   * where query.param is given by the user (search queary)
+   */
   let results = [];
   let activePage = req.params.selection.toLowerCase().replace('-', '');
   switch(req.params.selection.toLowerCase()) {
@@ -130,5 +134,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen('8080', () => {
-  console.log('The server is listening at port 8080');
+  console.log('The server is listening at port http://localhost:8080');
 })

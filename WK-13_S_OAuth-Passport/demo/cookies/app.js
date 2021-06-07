@@ -1,12 +1,10 @@
 const express = require('express')
-const bodyParser = require('body-parser')
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
 
 const app = express()
 
-app.use(bodyParser.json())
-
+app.use(express.json()) // for parsing application/json
 app.use(cookieParser('super secret'))
 
 app.use(session({
@@ -28,14 +26,20 @@ app.get('/', (req, res) => {
 
 app.get('/setmyusername', (req, res) => {
     req.session.username = "Harry Styles"
+    req.session.dogname = "shine!!"
+    
+    
     res.send(`<h1>You username is now Harry</h1>`)
 })
 
 app.get('/setcookie', (req, res) => {
+/**
+ * Create signed cookie
+ */
     res.cookie('password', 'cupcakes')
     res.send('I sent your cookies')
 })
 
 app.listen(3001, () => {
-    console.log("Server started") 
+    console.log("Server started at http://localhost:3001"); 
 })
