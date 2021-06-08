@@ -25,3 +25,48 @@ The previous solution is included here for you to use as a starting point. You s
 2. Create a "Profile Update" page so that users can edit content (Hint: use PUT request)
 3. Add a "delete profile" button that will let users delete unused profiles (Hint: use DELETE request) 
 4. Use the built-in express router to move all of the authentication routes into a new file.
+
+_
+http://localhost:3000/auth/github/callback
+
+```js
+{
+	"cookie": {
+		"originalMaxAge": 60000,
+		"expires": "2021-06-08T02:07:58.489Z",
+		"httpOnly": true,
+		"path": "/"
+	},
+	"passport": {
+		"user": {
+			"id": "12738884",
+			"displayName": "Castaneda",
+			"username": "heggy231",
+			"profileUrl": "https://github.com/heggy231",
+			"photos": [
+				{
+					"value": "https://avatars.githubusercontent.com/u/12738884?v=4"
+				}
+			],
+			.....
+				"type": "User",
+				"site_admin": false,
+				"name": "Castaneda",
+				"company": null,
+				"blog": "",
+				"location": "San Francisco, Bay Area",
+				"email": null,
+				"hireable": true,
+				"bio": "Javascript Developer",
+				"twitter_username": null,
+				"public_repos": 410,
+				"public_gists": 115,
+				"followers": 81,
+				"following": 189,
+				"created_at": "2015-06-03T23:22:12Z",
+				"updated_at": "2021-06-07T23:25:32Z"
+			}
+		}
+	}
+}
+```

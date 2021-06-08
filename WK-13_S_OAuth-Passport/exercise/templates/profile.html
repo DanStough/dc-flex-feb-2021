@@ -41,11 +41,20 @@
     </head>
     <body>
         <div class="content">
-            <h1 class="text-center"> 📸 FACEGRAM</h1>
+            <h1 class="text-center"> 📸 FACEGRAM ${heggy}</h1>
             <div>
                 <div class="profile">
                     <img src="${profile.avatar}" class="avatar" />
                     <h2 class="profile-name">${profile.name}</h2>
+                    <div>
+                        <h2>username: ${userObj.username}</h2>
+                        ${
+                            photosArray.map(photo => `
+                                <img class=avatar src="${photo.value}">
+                            `).join('')
+                        }
+                    </div>
+                    
                 </div>
                 <br />
                 <h5 class="text-center" >Email: <a href="mailto:${profile.email}">${profile.email}</a></h5>

@@ -127,5 +127,5 @@ app.get("/", ensureAuthenticated, (req, res)=>{
 app.use(express.static('public'));
 
 app.listen(3001, ()=>{
-    console.log("running on port 3001")
+    console.log("running on port http://localhost:3001")
 })
