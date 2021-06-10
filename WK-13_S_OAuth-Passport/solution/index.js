@@ -85,7 +85,7 @@ app.get('/logout', (req, res) => {
 })
 
 // 4. Add a post method to handle adding a new user
-app.post("/profile", ensureAuthenticated, (req,res) => {
+app.post("/profile", ensureAuthenticated, (req, res) => {
     console.log(req.body)
 
     // Create ID

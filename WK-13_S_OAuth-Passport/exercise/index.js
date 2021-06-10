@@ -22,13 +22,6 @@ app.set('view engine', 'html');
 
 const data = require('./dataObject');
 
-function ensureAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) {
-        return next();
-    }
-    res.redirect('/login.html')
-}
-
 // ----------------------------------------------------------------------------
 //                                SESSION MIDDLEWARE                           
 // ----------------------------------------------------------------------------
@@ -109,7 +102,14 @@ app.get('/auth/github/callback',
   function(req, res) {
     // Successful authentication, redirect to list of user pg, home
     res.redirect('/');
-  });
+});
+
+function ensureAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/login.html')
+}
 
 // log out route
 app.get('/logout', (req, res) => {
