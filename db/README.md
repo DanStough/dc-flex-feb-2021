@@ -20,7 +20,7 @@ https://www.postgresql.org/docs/13/datatype.html
 How to Use
 Here are some of the most common functions to use.
 
-Function	Description
+### pgp method/Function	Description:
 - db.any()	Executes a query that can return any number of rows
 - db.one()	Executes a query that expects exactly 1 row to be returned
 - db.none()	Executes a query that expects no data to be returned
@@ -85,3 +85,18 @@ When you run the main file (node index.js), you will get the following results i
   { id: 2, title: "Sweep the house", is_completed: false },
   { id: 3, title: "Walk the dog", is_completed: false },
 ];
+
+Part2) 
+Todo CRUD API
+Create a simple CRUD API using Express routes that works with the pg-promise library for the following actions:
+
+Method	Endpoint	Description
+POST	/tasks	Creates a new task
+* GET	/tasks	Reads all of the tasks
+PATCH	/tasks/:id/is_completed	Updates if the task is completed
+PATCH	/tasks/:id/title	Updates the task's title
+DELETE	/tasks/:id	Deletes a task
+
+
+![post route postman](https://res.cloudinary.com/practicaldev/image/fetch/s--vEe4jhLh--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://s5.gifyu.com/images/postgresql-04.gif)
+To create new post: pick post, body, form-url, enter title: walk the cat

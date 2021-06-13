@@ -8,6 +8,7 @@ const app = express();
 
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+app.use(express.static('public'));
 
 app.engine('html', es6Renderer);
 app.set('views', 'templates');
@@ -96,8 +97,6 @@ app.get("/", async (req, res)=>{
         }
     });
 })
-
-app.use(express.static('public'));
 
 app.get("*", (req, res)=>{
     res.render('404');
