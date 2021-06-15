@@ -109,3 +109,6 @@ dist
 FUTURE/
 
 prep/
+
+# Visual Studio Code
+.vscode/

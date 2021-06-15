@@ -90,20 +90,32 @@ data.forEach( async profile => {
    * "name":"Traci Koch",
    * "email":"Kaelyn.Spencer4@yahoo.com",
    * "avatar":"https://cdn.fakercloud.com/avatars/stephcoue_128.jpg",
-   * "images":["http://placeimg.com/640/480/food","http://placeimg.com/640/480/food","http://placeimg.com/640/480/food"],
    * "id":4
    * }
    */
 
-  // For each profile, create the images
+  // For each profile, add key:value for images
   profile.images.forEach( async image => {
     let res = await db.one(`
       INSERT INTO images (profile_id, url)
       VALUES($1, $2) RETURNING id;
     `, 
     [profile.id, image]);
+
     console.log("res return newly created row: ====>", JSON.stringify(res));
     // => resulting obj {"id":11}
     console.log(`Inserted image ${res.id} for ${profile.name}`);
   });
+
+  /**
+   * result profile obj has `id` from `profile.id = res.id` assignment
+   * 
+   * {
+   * "name":"Traci Koch",
+   * "email":"Kaelyn.Spencer4@yahoo.com",
+   * "avatar":"https://cdn.fakercloud.com/avatars/stephcoue_128.jpg",
+   * "images":["http://placeimg.com/640/480/food","http://placeimg.com/640/480/food","http://placeimg.com/640/480/food"],
+   * "id":4
+   * }
+   */
 });

@@ -3,8 +3,8 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('Photos', [{
-      title: 'Something I helped put in space',
-      url: 'https://solarsystem.nasa.gov/system/resources/detail_files/17761_cassinihuygens_BTN_16_purple_final_01.jpg',
+      title: 'Conference in L.A.',
+      url: 'https://placeimg.com/128/128/any',
       userId: 1,
       createdAt: new Date(),
       updatedAt: new Date()

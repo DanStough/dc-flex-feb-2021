@@ -2,7 +2,7 @@
   "development": {
     "username": "heggy",
     "password": null,
-    "database": "photo_share_dev2",
+    "database": "database_development",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

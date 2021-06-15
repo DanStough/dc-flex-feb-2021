@@ -11,6 +11,7 @@ app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.use(express.static('public'));
 
+// Configure Template Engine
 app.engine('html', es6Renderer);
 app.set('views', 'templates');
 app.set('view engine', 'html');
@@ -25,7 +26,7 @@ const cn = {
   user: process.env.DB_USER,
   password: process.env.DB_PASS
 };
-const db = pgp(cn);  // faceGram db obj created
+const db = pgp(cn); // faceGram db obj created
 
 app.post("/profile", async (req,res) => {
   console.log("create new user ====> req.body", req.body);
@@ -86,7 +87,7 @@ app.get("/profile/:id", async (req, res) => {
     // select first item in array [{id: 4, "name": "Kang", ...},{}]
     profile = dbRes[0];
 
-    // images = [{id: 4, profile_id: 4, url: http://placeimg.com/640/480/food}, {}, {}]
+    // images = [{id: 4, "name": "Kang", url: "www.placeimage.com"},{}]
     const images = await db.any(`
     SELECT * FROM images
     WHERE profile_id = $1;`,
