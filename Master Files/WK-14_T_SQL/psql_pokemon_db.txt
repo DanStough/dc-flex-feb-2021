@@ -1,0 +1,25 @@
+CREATE DATABASE Pokemon_db
+
+CREATE TABLE (id int, name  varchar, type varchar, evolvesFromID int);
+
+
+INSERT INTO pokemon(id,name,type,evolvesFromID)VALUES(2,'Ivysaur','Grass', 1);
+INSERT INTO pokemon(id,name,type,evolvesFromID)VALUES(3,'Venusaur','Grass', 2);
+INSERT INTO pokemon(id,name,type,evolvesFromID)VALUES(4,'Charmander','Fire',null);
+INSERT INTO pokemon(id,name,type,evolvesFromID)VALUES(5,'Charmeleon','Fire', 4);
+INSERT INTO pokemon(id,name,type,evolvesFromID)VALUES(6,'Charizard','Fire', 5);
+INSERT INTO pokemon(id,name,type,evolvesFromID)VALUES(7,'Squirtle','Water',null);
+INSERT INTO pokemon(id,name,type,evolvesFromID)VALUES(8,'Wartortle','Water', 7);
+INSERT INTO pokemon(id,name,type,evolvesFromID)VALUES(9,'Blastoise','Water',8);
+INSERT INTO pokemon(id,name,type,evolvesFromID)VALUES(10,'Caterpie','Bug', null);
+INSERT INTO pokemon(id,name,type,evolvesFromID)VALUES(11,'Metapod','Bug',10);
+INSERT INTO pokemon(id,name,type,evolvesFromID)VALUES(12,'Butterfree','Bug', 11);
+
+
+CREATE TABLE trainers(id INT, name varchar, isGymLeader boolean, pokemonslot1 INT, pokemonslot2 INT, pokemonslot3 INT, pokemonslot4 INT, pokemonslot5 INT, pokemonslot6 INT);
+
+INSERT INTO trainers(id,name,isGymLeader,pokemonslot1,pokemonslot2,pokemonslot3,pokemonslot4,pokemonslot5,pokemonslot6)VALUES(1,'Ash',FALSE,1,10,null,null,null,null);
+INSERT INTO trainers(id,name,isGymLeader,pokemonslot1, pokemonslot2, pokemonslot3, pokemonslot4, pokemonslot5, pokemonslot6)VALUES(2, 'Misty', TRUE, 7, null, null, null, null, null);
+INSERT INTO trainers(id,name,isGymLeader,pokemonslot1, pokemonslot2, pokemonslot3, pokemonslot4, pokemonslot5, pokemonslot6)VALUES(3,'Brock', TRUE, 3, 6, 9, null, null, null);
+INSERT INTO trainers(id,name,isGymLeader,pokemonslot1, pokemonslot2, pokemonslot3, pokemonslot4, pokemonslot5, pokemonslot6)VALUES(4, 'Axle', TRUE, 2, 4, 8, null, null, null);
+INSERT INTO trainers(id,name,isGymLeader,pokemonslot1, pokemonslot2, pokemonslot3, pokemonslot4, pokemonslot5, pokemonslot6)VALUES(5, 'Moxie', FALSE, 1, null, 9, 9,9,9);
