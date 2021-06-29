@@ -1,0 +1,17 @@
+{
+  "name": "imdb_hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:create": "createdb IMDB_db",
+    "db:destroy": "dropdb IMDB_db",
+    "db:init": "psql -f schema.sql IMDB_db",
+    "db:seed": "psql -f seed.sql IMDB_db",
+    "db:reset": "npm run db:destroy; npm run db:create && npm run db:init && npm run db:seed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
