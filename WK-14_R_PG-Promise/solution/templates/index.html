@@ -19,7 +19,7 @@
                 text-align: center;
             }
 
-            .text-center {
+            .header {
                 text-align: center;
             }
 
@@ -27,34 +27,20 @@
                 border-radius: 50%;
                 width: 75px;
             }
-
-            .photo-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-            }
-
-            .post {
-                width: 100px;
-            }
         </style>
     </head>
     <body>
         <div class="content">
-            <h1 class="text-center"> 📸 FACEGRAM</h1>
+            <h1 class="header"> 📸 FACEGRAM</h1>
+            <h5 class="text-center"><a href="/signup.html">SIGNUP</a></h5>
             <div>
-                <div class="profile">
-                    <img src="${profile.avatar}" class="avatar" />
-                    <h2 class="profile-name">${profile.name}</h2>
-                </div>
-                <br />
-                <h5 class="text-center" >Email: <a href="mailto:${profile.email}">${profile.email}</a></h5>
-                <hr />
-                <div class="photo-container">
-                    ${profile.images.map( image => `
-                        <img class="post" src="${image}" />
-                    `).join("")}
-                </div>
+                ${ profileArray.map( profile => `
+                    <div class="profile">
+                        <img src="${profile.avatar}" class="avatar" />
+                        <h2 class="profile-name"><a href="./profile/${profile.id}">${profile.name}</a></h2>
+                    </div>
+                    <br/>
+                ` ).join("")}
             </div>
         </div>
     </body>

@@ -1,36 +1,33 @@
-// 1. initialize express and templates
+
 const express = require("express");
-const es6Renderer = require("express-es6-template-engine");
-const axios = require("axios");
-const pgp = require("pg-promise")();
+const es6Renderer = require('express-es6-template-engine');
+const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 
-const cn = {
-  host: "localhost",
-  port: 5432,
-  database: "facegramdb",
-  max: 30,
-};
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
-const db = pgp(cn);
+app.engine('html', es6Renderer);
+app.set('views', 'templates');
+app.set('view engine', 'html');
 
-// getData = async () => {
-//   const
-// }
-// const getProfile = async () => {
-//     const
-// }
+const data = require('./dataObject')
 
-// Configure Template Engine
-app.engine("html", es6Renderer);
-app.set("views", "templates");
-app.set("view engine", "html");
+app.post("/profile", (req,res) => {
+    console.log(req.body)
 
-const data = require("./dataObject");
-// console.log(data)
+    // Create ID
+    const id = uuidv4()
 
-// 4. Detail page here.
+    // Save data in our "DB"
+    req.body.id = id
+    req.body.images = []
+    data[id]=req.body
+
+    res.status(200).send()
+})
+
 app.get("/profile/:id", (req, res) => {
   const profile = data[req.params.id];
 
@@ -45,25 +42,24 @@ app.get("/profile/:id", (req, res) => {
   });
 });
 
-// 5. List page here
-app.get("/", (req, res) => {
-  const profileIds = Object.keys(data);
-  const profileArray = profileIds.map((id) => data[id]);
-  console.log(profileArray);
+app.get("/", (req, res)=>{
+    const profileIds = Object.keys(data)
+    const profileArray = profileIds.map( id => data[id])
+    console.log(profileArray)
 
-  res.render("index", {
-    locals: {
-      profileArray,
-    },
-  });
-});
+    res.render('index', {
+        locals: {
+            profileArray
+        }
+    })
+})
 
-// 3. Write out a route to test your server is working
-// app.get("*", (req, res) => {
-//   res.send("catch all");
-// });
+app.use(express.static('public'));
 
-// 2. Start your express server
-app.listen(3000, () => {
-  console.log("running on port 3000");
-});
+app.get("*", (req, res)=>{
+    res.render('404');
+})
+
+app.listen(3000, ()=>{
+    console.log("running on port 3000")
+})

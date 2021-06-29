@@ -16,9 +16,19 @@ Hints for where to start:
 1. Try writing a query to handle `/profile/:"id`
 1. Try writing a query to insert a record for POST `/profile`
 
-# Bonus Points!
+## Bonus Points!
 1. Add a "Delete" button to each profile on the `/profile` view and on the edit profile page. 
     1. Add a new route to handle this delete.
     1. Add code in the frontend to handle the delete request (review how the signup page works for more details).
     1. Create a SQL statement to delete the record from the database.
     1. Refresh the view.
+
+# RUNNING THE SOLUTION
+
+1. `npm install`
+1. Create an `.env` file according to the template provided using your postgres connection details.
+1. Run the following to setup your database:
+    1. `npm run db:create`
+    1. `npm run db:init`
+    1. `npm run db:seed`
+1. Run the app with `npm run dev`

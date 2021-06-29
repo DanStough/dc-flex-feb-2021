@@ -4,21 +4,21 @@
   "description": "Something like social media",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-es6-template-engine": "^2.2.3",
-    "faker": "^5.5.3",
-    "uuidv4": "^6.2.8"
+    "pg-promise": "^10.10.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
-    "devArray": "nodemon node indexWArray.js"
+    "db:create": "createdb facegram",
+    "db:drop": "dropdb facegram",
+    "db:init": "psql -d facegram < ./db/schema.sql",
+    "db:seed": "node ./db/seed.js",
+    "dev": "nodemon index.js"
   },
   "author": "",
-  "license": "ISC",
-  "keywords": []
+  "license": "ISC"
 }

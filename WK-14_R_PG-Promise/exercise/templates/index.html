@@ -24,28 +24,29 @@
         text-align: center;
       }
 
-      .header {
-        text-align: center;
-      }
-      .signup-link {
-        text-align: center;
-      }
-      .avatar {
-        border-radius: 50%;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="content">
-      <h1 class="header">📸 FACEGRAM</h1>
-      <div>
-        <h3><a href="/signup.html" class="signup-link">Sign Up</a></h3>
-        ${ profileArray.map( profile => `
-        <div class="profile">
-          <img src="${profile.avatar}" class="avatar" />
-          <h2 class="profile-name">
-            <a href="./profile/${profile.id}">${profile.name}</a>
-          </h2>
+            .header {
+                text-align: center;
+            }
+
+            .avatar {
+                border-radius: 50%;
+                width: 75px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <h1 class="header"> 📸 FACEGRAM</h1>
+            <h5 class="text-center"><a href="/signup.html">SIGNUP</a></h5>
+            <div>
+                ${ profileArray.map( profile => `
+                    <div class="profile">
+                        <img src="${profile.avatar}" class="avatar" />
+                        <h2 class="profile-name"><a href="./profile/${profile.id}">${profile.name}</a></h2>
+                    </div>
+                    <br/>
+                ` ).join("")}
+            </div>
         </div>
         <br />
         ` ).join("")}
