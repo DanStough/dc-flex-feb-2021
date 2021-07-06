@@ -1,7 +1,8 @@
-
+require('dotenv').config();
 const express = require("express");
 const es6Renderer = require('express-es6-template-engine');
 const { v4: uuidv4 } = require('uuid');
+const pgp = require('pg-promise')():
 
 const app = express();
 
@@ -12,8 +13,16 @@ app.engine('html', es6Renderer);
 app.set('views', 'templates');
 app.set('view engine', 'html');
 
-const data = require('./dataObject')
+// const data = require('./dataObject')
+const cn = {
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  database: process.env.DB_NAME,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS
+}
 
+const db = pgp(cn);
 app.post("/profile", (req,res) => {
     console.log(req.body)
 

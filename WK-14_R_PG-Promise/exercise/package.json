@@ -4,9 +4,11 @@
   "description": "Something like social media",
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-es6-template-engine": "^2.2.3",
     "faker": "^5.5.3",
+    "pg-promise": "^10.10.2",
     "uuidv4": "^6.2.8"
   },
   "devDependencies": {
@@ -14,8 +16,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon node index.js",
-    "devArray": "nodemon node indexWArray.js"
+    "db:create": "createdb facegram",
+    "db:drop": "dropdb facegram",
+    "db:init": "psql -d facegram < ./db/schema.sql",
+    "db:seed": "node ./db/seed.js",
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC"
