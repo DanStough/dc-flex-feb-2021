@@ -1,0 +1,96 @@
+https://www.notion.so/samuraijane/6-34ce4f8a1ba94771939aff7d8f378c66
+
+https://learn.digitalcrafts.com/flex/lessons/back-end-foundations/node-101/#learning-objectives
+
+JavaScript on a Server is referred to as Node
+server side code is written in node
+serverside vs client side 
+
+Type Node in Terminal will open Node terminal can be used like Deve Tools
+.exit to exit
+
+Created Interview file in clas example
+Type function to practice node index.js in terminal
+ 
+______________________________________________________________________
+
+                   👩‍🔧  Intro to (NPM) Node Package Manager
+______________________________________________________________________
+
+💥Practice💥
+
+cowsay - https://www.npmjs.com/package/cowsay
+
+ - mkdir 
+ - cd into new directory
+ - in terminal initialize npm -------npm init -y -------- (Means I want to initialize my project as npm library -y means accept all defaults(Optional))
+
+ Now that it has been initialzed by NPM I can use other libraries written in NPM by other people. 
+
+ - package.json is created (if you ever see package.json in code it means its npm)
+        - Inside of package.json  -
+        - name is defaulted to directory name
+        - its key value pairs 
+        - it can be changed   
+
+ -  npm i cowsay ( the library we are using today)
+ - ls (to see what came with it)
+ - package-lock.json (helps keep track of the npm packages you are using. You never have to go in here)
+ - node modules (code recieved from npm library cowsay )
+
+- In terminal cowsay = require("cowsay");
+- In terminal cowsay.say({text: 'I am a mooodule})
+- You should get a code cow
+
+***TIPS***
+***when you choose libraries look for last published and weekly downloads***
+
+example: webpack
+
+--------------------------------------------------------------------------------
+
+                              Demo Building API
+--------------------------------------------------------------------------------
+
+API - Exposes Methods or Data
+
+You have to build a server in order to expose API data!
+
+Build server with Express - https://www.npmjs.com/package/express
+
+Steps
+
+1. mkdir friendsAPI
+2. cd friendsAPI
+In terminal
+3. npm init -y
+4. npm install express
+5. cat package.json (shows the dependencies created within package.json)
+6. ls ( lists the new files created OPTIONAL)
+7. npm install --sav-dev nodemon (auto restarts server)
+8. cat package.json ( you will see (with flag -- saves as) dev dependencies and (without flag -- saves as) dependencies)
+                **beneficial to know whats require to run the app and whats required to build the app**
+9. copy text in express library 
+
+            const express = require('express')
+            const app = express()
+            
+            app.get('/', function (req, res) {
+            res.send('Hello World')
+            })
+            
+            app.listen(3000)
+
+10. Create file server.js
+11. paste code in server.js
+12. package.json creazte start script
+13. in terminal run script "npm run _______"(name of your script)
+    ie. npm run start 
+
+    ** make sure save and all other versions of vscode are closed **
+
+🎆6.23.21 Stopped at 10pm unable to get port on postman or terminal on Stopped on video at 3hr mark🎆
+
+Zoom video
+
+https://us02web.zoom.us/rec/play/2CGc-5yXA1oR9Y7uZW-GD37FZRkqKeOHBQqFV1bJMrNHJgu_8H-6okb_ByBKyYV6AlYs__1zy8k1WVV4.fprx1jOPpengWVj4?continueMode=true&_x_zm_rtaid=WKXzLSGITOWcSIduMCJcxw.1624482763069.939b75558e53914b00ab289668870052&_x_zm_rhtaid=379
