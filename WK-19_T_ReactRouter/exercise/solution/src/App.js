@@ -1,5 +1,6 @@
 
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import Header from './components/Header'
 import Homepage from './components/Homepage'
 import Products from './components/Products'
@@ -27,6 +28,7 @@ function App() {
                     <Route path="*"><Redirect to="/home" /></Route>
                 </Switch>
             </Container>
+            <Footer />
         </Router>
     </div>
   );
