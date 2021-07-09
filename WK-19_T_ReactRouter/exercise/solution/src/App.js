@@ -25,7 +25,7 @@ function App() {
                     <Route path="/home"><Homepage /></Route>
                     <Route path="/contact"><Contact /></Route>
                     <Route path="/products"><Products /></Route>
-                    <Route path="*"><Redirect to="/home" /></Route>
+                    <Route exact path="/"><Redirect to="/home" /></Route>
                 </Switch>
             </Container>
             <Footer />

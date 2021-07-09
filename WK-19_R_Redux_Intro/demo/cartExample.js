@@ -1,0 +1,68 @@
+// We're building a shopping cart program
+const redux = require("redux");
+
+// What do I want my store (aka STATE) to look like?
+// store = {
+//     value: 7
+// }
+
+// ACTION TYPES
+const ADD_ITEM_TO_CART = "cart/add"
+const REMOVE_ITEM_FROM_CART = "cart/remove"
+const CHECKOUT = "checkout"
+
+let defaultState = {
+    cartItems: [],
+    shippingZipcode: null
+}
+
+// The reducer is going to change the store based on the action types
+function shoppingReducer(state = defaultState, action){
+    switch (action.type) {
+        case ADD_ITEM_TO_CART:
+            return {
+                ...state,
+                cartItems: state.cartItems.concat(action.payload)
+            }
+        // TODO
+        case REMOVE_ITEM_FROM_CART:
+            return state
+        // TODO
+        case CHECKOUT:
+            return state
+        default:
+            return state
+    }
+}
+
+let store = redux.createStore(shoppingReducer)
+
+store.subscribe(() => {
+    console.log(store.getState())
+})
+
+store.dispatch({ 
+    type: ADD_ITEM_TO_CART,
+    payload: {
+        id: 1,
+        name: "hair dryer",
+        price: 20.00
+    }
+ })
+ store.dispatch({ 
+    type: ADD_ITEM_TO_CART,
+    payload: {
+        id: 2,
+        name: "pencils",
+        price: 4.00
+    }
+ })
+ store.dispatch({ 
+    type: ADD_ITEM_TO_CART,
+    payload: {
+        id: 1,
+        name: "hair dryer",
+        price: 20.00
+    }
+ })
+
