@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require("express");
 const es6Renderer = require('express-es6-template-engine');
 const { v4: uuidv4 } = require('uuid');
-const pgp = require('pg-promise')():
+const pgp = require('pg-promise')();
 
 const app = express();
 
