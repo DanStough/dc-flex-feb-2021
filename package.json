@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "bootstrap": "^4.6.0",
-    "react-bootstrap": "^1.6.1"
+    "react-bootstrap": "^1.6.1",
+    "redux": "^4.1.0"
   }
 }
