@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple Counter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="app">
+        <h1 id="counterValue">0</h1>
+        <button id="increment">+1</button>
+        <button id="decrement">-1</button>
+        <br/>
+        <button id="fiveIncrement">+5</button>
+        <button id="fiveDecrement">-5</button>
+        <br/>
+        <label for="colors">Text Color:</label>
+        <select name="colors" id="colors">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option selected value="black">Black</option>
+        </select>
+        <br/>
+        <label for="override">Counter Override:</label>
+        <input type="number" id="override" value="0" />
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.min.js"></script>
+    <script src="reducer.js"></script>
+    <script src="render.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
