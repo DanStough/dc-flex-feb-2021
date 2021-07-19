@@ -1,15 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
-function SearchForm() {
-
-  return (
-    <form style={{paddingBottom: "50px"}} >
-        <div className="form-group">
-            {/* We covered this binding state to value in class */}
-            <label htmlFor="name">Search Term</label>
-            <input className="form-control" type="text" name="term" value={this.state.term} onChange={this.handleChange}/>
-        </div>
-        <div className="form-group">
+<div className="form-group">
             <div>Limit</div>
             <div className="form-check form-check-inline">
                 {/* Don't forget the two way bind for these items too. Plus there is an onChange FOR EACH RADIO BUTTON */}
@@ -39,9 +28,3 @@ function SearchForm() {
                 <option value="r">R</option>
             </select>
         </div>
-        <button className="btn btn-primary" type="submit">Submit</button>
-    </form>
-  );
-}
-
-export default SearchForm;
